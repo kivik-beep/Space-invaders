@@ -8,4 +8,5 @@
 - *???*
 
 ## Harjoitustyö
+1. aiheen valinta
 *Tästä myöhemmin lisää...*
