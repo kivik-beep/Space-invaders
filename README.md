@@ -1,8 +1,11 @@
 # **Ohjelmistotekniikka**
-##Laskarit
-viikko 1
+## Laskarit
+### Viikko 1
 - komentorivi
 - git ja github
 
-myöhemmin tällä kurssilla tutustutaan **harjoitustyön** tekoon.
-*siitä myöhemmin lisää*...
+### Viikko 2
+- *???*
+
+myöhemmin ryhdytään **harjoitustyön** tekoon.
+*Siitä myöhemmin lisää*...
