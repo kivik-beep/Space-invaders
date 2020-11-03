@@ -1,0 +1,114 @@
+commit e28080eb1a106175ace3c41335f55d18c600ab90
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 18:49:20 2020 +0200
+
+    poistojen harjoittelua
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6630dac8e11138329ab5c565c8c4091c46dede7f
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 18:40:51 2020 +0200
+
+    lisätään kansiollinen tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 1 +
+ 3 files changed, 1 insertion(+)
+
+commit 08557050b6b7f35d6c18f4b2c77e786250406c9c
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 18:24:45 2020 +0200
+
+    muutoksia ekaan ja kolmanteen
+
+ eka.txt    | 10 +++-------
+ kolmas.txt |  4 +++-
+ 2 files changed, 6 insertions(+), 8 deletions(-)
+
+commit 089ab00be0aaebe529df432f98a1b19b77bdd264
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 18:18:56 2020 +0200
+
+    uudelleen nimeäminen
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 1029b363df43e781b49a8d132564feb46e672054
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 18:16:02 2020 +0200
+
+    toisen poisto
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 3b1986faa98d245288ea6ea6e572a6e487e8eb3f
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 18:12:16 2020 +0200
+
+    lisämuutoksia tiedostoon
+
+ tiedosto.txt | 19 ++++++++-----------
+ 1 file changed, 8 insertions(+), 11 deletions(-)
+
+commit 446a82c9245095008fa225a7ad3dc43c2701c7e8
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 18:06:27 2020 +0200
+
+    Muutoksia tiedostoon
+
+ tiedosto.txt | 57 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 57 insertions(+)
+
+commit 2f91ff50a47037fe49429a729da92f6b038336be
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 17:51:35 2020 +0200
+
+    stuff lisätty
+
+ stuff/things.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit eccf17f418900152c9196b3dbfccae39d79c6419
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 17:49:23 2020 +0200
+
+    muutoksia toiseen ja kolmanteen
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit ba49d1a25bb35c36991f75d40354b04f41c805e4
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 17:46:57 2020 +0200
+
+    kolmas lisätty
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 4a0ad1d8ab29cadfe40b24c8cf239f06b98e7b3f
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 17:43:56 2020 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 4c701d151f91edc1092aea0967912dfd6d10014c
+Author: K.Kivi <72075784+kivik-beep@users.noreply.github.com>
+Date:   Tue Nov 3 17:41:10 2020 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
