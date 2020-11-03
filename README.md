@@ -1,11 +1,11 @@
 # **Ohjelmistotekniikka**
 ## Laskarit
 ### Viikko 1
-- komentorivi
-- git ja github
+- [komentorivi.txt](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
+- [gitlog.txt](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
 
 ### Viikko 2
 - *???*
 
-myöhemmin ryhdytään **harjoitustyön** tekoon.
-*Siitä myöhemmin lisää*...
+## Harjoitustyö
+*Tästä myöhemmin lisää...*
