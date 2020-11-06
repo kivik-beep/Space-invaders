@@ -86,10 +86,17 @@ public class KassapaateTest {
     }
 
     @Test
+    public void maksukortilleEiVoiLadataNegatiivistaSummaa() {
+        kassa.lataaRahaaKortille(kortti, -2000);
+
+        assertEquals(0, kortti.saldo());
+    }
+
+    @Test
     public void maksukortinLatausLisaaRahanKassaan() {
         kassa.lataaRahaaKortille(kortti, 2000);
 
-        assertEquals(ALKUSALDO+2000, kassa.kassassaRahaa());
+        assertEquals(ALKUSALDO + 2000, kassa.kassassaRahaa());
     }
 
     @Test
