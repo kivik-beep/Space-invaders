@@ -5,7 +5,7 @@
 - [gitlog.txt](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
 
 ### Viikko 2
-- Unicafe-sovellus, testit ja [testikattavuus](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko2/testikattavuus_unicafe.pdf)
+- Unicafe-sovellus, [testien luominen](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko2/Unicafe/src/test/java/com/mycompany/unicafe/KassapaateTest.java) ja [testikattavuus](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko2/testikattavuus_unicafe.pdf)
 
 ### Viikko 3
 - Luokkakaaviot
