@@ -1,14 +1,13 @@
-Harjoitustyön vaatimusmäärittely
+## Harjoitustyön vaatimusmäärittely
 Tavoitteena on tehdä space invaders peli. 
 
-Käyttöliittymä :
 Pelissä on kolme osaa:
 1. Pelikenttä
 	- 15x15 neliön mallinen pohja
-2. pelaajan ohjaama alus (-> yksinkertainen muoto esim kolmio)
-	- liikkuu yhdellä rivillä edestakaisin (nuolinäppäimillä)
-	- ampuu (space) (ammus kuutio)
-3. vihollisalukset (-> yksinkertainen selvästi pelaajan aluksesta poikkeava muoto)
+2. pelaajan ohjaama alus (*yksinkertainen muoto esim kolmio*)
+	- liikkuu yhdellä rivillä edestakaisin (*nuolinäppäimillä*)
+	- ampuu (space) (*ammus kuutio*)
+3. vihollisalukset (*yksinkertainen selvästi pelaajan aluksesta poikkeava muoto*)
 	- 3x10 vihollisen rivit jotka liikkuvat pelialuetta reunasta toiseen
 	- kun saapuvat reunaan, lasketuvat yhden rivin alaspäin 
 
