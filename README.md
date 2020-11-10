@@ -1,4 +1,17 @@
 # **Ohjelmistotekniikka**
+
+## Harjoitustyö
+Harjoitustyönä toteutan Space invaders pelin viikottaisten tavoitteiden avulla osana ohjelmistotekniikan kurssia. 
+
+### Viikko 2
+1. Aiheen valinta ja [vaativuusmäärittely](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/vaativuusmaarittely.md)
+2. [Työaikakirjanpito](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/tuntikirjanpito.md)
+
+### Viikko 3
+- 
+
+
+
 ## Laskarit
 ### Viikko 1
 - [komentorivi.txt](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
@@ -12,13 +25,4 @@
 - Sekvenssikaaviot
 
 
-## Harjoitustyö
-*Aloitus viikolla 2*
-### Viikko 2
-1. Aiheen valinta ja **määrittelydokumentti**
-2. Työaikakirjanpidon luonti
 
-### Viikko 3
-- *???*
-
-*Jatkuu...*
