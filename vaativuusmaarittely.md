@@ -1,7 +1,7 @@
-## Harjoitustyön vaatimusmäärittely
+## Harjoitustyön vaativuusmäärittely
 Tavoitteena on tehdä space invaders peli. 
 
-Pelissä on kolme osaa:
+### Pelissä on kolme osaa:
 1. Pelikenttä
 	- 15x15 neliön mallinen pohja
 2. pelaajan ohjaama alus (*yksinkertainen muoto esim kolmio*)
@@ -22,7 +22,7 @@ Kun peli loppuu palataan alkunäkymään.
 Lähdetään hyvin yksinkertaisesta suunnitelmasta, mutta todennäköisesti osa jatkokehitysideoista otetaan käyttöön jo pelin aiemmassa versiossa.
 
 
-Jatkokehitys:
+### Jatkokehitys:
 - Pelikenttää suurentamalla ja vihollisten määrää lisäämällä pelistä saa tehtyä vaikeamman
 - Tason loppuessa voi alkaa uusi taso joka on hiukan edellistä nopeampi
 - Scoreboard tai pistetilanne joka näkyy esimerkiksi pelikentän yläreunassa
