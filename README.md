@@ -21,8 +21,8 @@ Harjoitustyönä toteutan Space invaders pelin viikottaisten tavoitteiden avulla
 - Unicafe-sovellus, [testien luominen](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko2/Unicafe/src/test/java/com/mycompany/unicafe/KassapaateTest.java) ja [testikattavuus](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko2/testikattavuus_unicafe.pdf)
 
 ### Viikko 3
-- Luokkakaaviot
-- Sekvenssikaaviot
+- Luokkakaaviot, [Monopoli](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko3/Monopoli.jpg)
+- Sekvenssikaaviot [Kone ja koneisto](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko3/Sekvenssikaavio.png)
 
 
 
