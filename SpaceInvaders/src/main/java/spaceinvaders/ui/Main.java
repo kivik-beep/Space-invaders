@@ -1,21 +1,17 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package spaceinvaders.ui;
 
-import java.awt.Button;
-
-public class Main extends Application {
-    // sovelluslogiikka
-    public void start(Stage primaryStage){
-        // käyttöliittymä
-        Button startNewGame = new Button("Start");
-        
-    }
-    
-    public void stop() {
-        //sulje ohjelma
-    }
-    
+/**
+ *
+ * @author kxkivi
+ */
+public class Main {
     public static void main(String[] args) {
-        launch(args);
+        Start.main(args);
     }
+    
 }

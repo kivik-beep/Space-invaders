@@ -1,15 +1,11 @@
 package spaceinvaders;
 
-import java.awt.Polygon;
+import javafx.scene.shape.Polygon;
 
 public class Shot extends Character {
 
     public Shot(int x, int y) {
-        super(new Polygon(), x, y);
-        /* 
-    - liikkuu ylöspäin
-    - on neliö
-    - lähtee aluksesta
-         */
+    super(new Polygon(-5, -5, -5, 5, 5, 5, 5,-5), x, y);
+
     }
 }

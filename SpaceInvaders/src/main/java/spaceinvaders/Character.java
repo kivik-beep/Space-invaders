@@ -5,20 +5,23 @@
  */
 package spaceinvaders;
 
-import java.awt.Polygon;
-import java.awt.geom.Point2D;
+import javafx.geometry.Point2D;
+import javafx.scene.shape.Polygon;
 
-/**
- *
- * @author kxkivi
- */
+
 public abstract class Character {
-    private final Polygon character;
+    private Polygon character;
     private Point2D movement;
     
     public Character(Polygon shape, int x, int y) {
         this.character = shape;
-
+        this.character.setTranslateX(x);
+        this.character.setTranslateY(y);
+        this.movement=new Point2D(0,0);
+    }
+    
+    public Polygon getCharacter() {
+        return character;
     }
     
 }
