@@ -18,6 +18,7 @@ public class CharacterTest {
     Spaceship spaceship;
     Shot shot;
     Invader invader;
+    private static final double DELTA = 1e-15;
     
     @Before
     public void setUp() {
@@ -38,6 +39,22 @@ public class CharacterTest {
 
          Polygon ship = new Polygon(-20, 0, 20, 0, 0, -45);
          Polygon testShip = spaceship.getCharacter();
+     }
+     
+     
+     @Test
+     public void moveLeftWorks() {
+         spaceship.moveLeft();
+         spaceship.moveLeft();
+         assertEquals(-2, spaceship.getCharacter().getTranslateX(), DELTA);
+     }
+     
+     @Test
+     public void moveRightWorks() {
+         spaceship.moveRight();
+         spaceship.moveRight();
+         assertEquals(2, spaceship.getCharacter().getTranslateX(), DELTA);
+         
      }
 
      
