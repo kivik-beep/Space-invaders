@@ -1,4 +1,3 @@
-
 package spaceinvaders;
 
 import javafx.geometry.Point2D;
@@ -21,26 +20,31 @@ public abstract class Character {
     public Polygon getCharacter() {
         return character;
     }
-    
-    public void moveLeft() {
-        //player &invader
-        
-        this.character.setTranslateX(this.character.getTranslateX()-1);
+
+    public void move(int way) {
+        //way<0 = left
+        //way>0 = right
+        this.character.setTranslateX(this.character.getTranslateX() + way);    
     }
-    public void moveRight() {
-        //player &invader
-        
-        this.character.setTranslateX(this.character.getTranslateX()+1);
-    }
-    
+
     public void moveUp() {
         // ammo
+       /* int shot = 50;
+        for(int i = 0; i < shot; i++){
+            this.movement = this.movement.add(0, 0);
+            this.character.setTranslateY(this.character.getTranslateY() + this.movement.getY());
+            
+            
+        }*/
     }
-    
-    public void moveDown(){
+
+    public void moveDown() {
         //invader (&invader ammo?)
+        this.character.setTranslateY(this.character.getTranslateY() + 2);
     }
     
+ 
+
     public boolean alive() {
         return this.alive;
     }

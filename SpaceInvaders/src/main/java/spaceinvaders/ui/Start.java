@@ -23,11 +23,11 @@ public class Start extends Application {
         board.setPrefSize(WIDTH, HEIGHT);
 
         Spaceship ship = new Spaceship(WIDTH / 2, HEIGHT - 10);
-        Shot ammo = new Shot(WIDTH / 2, HEIGHT / 2);
+
         Invader enemy = new Invader(WIDTH / 2, 40);
 
         board.getChildren().add(ship.getCharacter());
-        board.getChildren().add(ammo.getCharacter());
+
         board.getChildren().add(enemy.getCharacter());
 
         Scene scene = new Scene(board);
@@ -43,23 +43,28 @@ public class Start extends Application {
         new AnimationTimer() {
             @Override
             public void handle(long l) {
-                 if (buttons.getOrDefault(KeyCode.LEFT, false)) {
-                    ship.moveLeft();
+                if (buttons.getOrDefault(KeyCode.LEFT, false)) {
+                    ship.move(-2);
                 }
-                 if (buttons.getOrDefault(KeyCode.RIGHT, false)) {
-                    ship.moveRight();
+                if (buttons.getOrDefault(KeyCode.RIGHT, false)) {
+                    ship.move(2);
                 }
+                if (buttons.getOrDefault(KeyCode.SPACE, false)) {
+                    Shot ammo = new Shot((int) ship.getCharacter().getTranslateX(), HEIGHT - 60);
+                    board.getChildren().add(ammo.getCharacter());
+                    ammo.moveUp();
+                }
+
             }
-                                   
+
         }.start();
 
-            stage.setTitle (
+        stage.setTitle(
+                "! ! Space invaders ! !");
+        stage.setScene(scene);
 
-            "! ! Space invaders ! !");
-            stage.setScene (scene);
-
-            stage.show ();
-        }
+        stage.show();
+    }
 
     public static void main(String[] args) {
         launch(args);

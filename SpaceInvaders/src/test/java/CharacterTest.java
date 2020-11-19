@@ -43,17 +43,17 @@ public class CharacterTest {
      
      
      @Test
-     public void moveLeftWorks() {
-         spaceship.moveLeft();
-         spaceship.moveLeft();
-         assertEquals(-2, spaceship.getCharacter().getTranslateX(), DELTA);
+     public void moveWorksToLeft() {
+         spaceship.move(-2);
+         spaceship.move(-2);
+         assertEquals(-4, spaceship.getCharacter().getTranslateX(), DELTA);
      }
      
      @Test
-     public void moveRightWorks() {
-         spaceship.moveRight();
-         spaceship.moveRight();
-         assertEquals(2, spaceship.getCharacter().getTranslateX(), DELTA);
+     public void moveWorkstoRight() {
+         spaceship.move(2);
+         spaceship.move(2);
+         assertEquals(4, spaceship.getCharacter().getTranslateX(), DELTA);
          
      }
 
