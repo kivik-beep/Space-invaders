@@ -1,24 +1,23 @@
-# **Ohjelmistotekniikka**
+# Space invaders
 
-## Harjoitustyö
-Harjoitustyönä toteutan Space invaders pelin viikottaisten tavoitteiden avulla osana ohjelmistotekniikan kurssia. 
+Toteutan Space invaders pelin harjoitustyönä osana ohjelmistotekniikan kurssia. 
 
-### Viikko 2
-1. Aiheen valinta ja [vaativuusmäärittely](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/vaativuusmaarittely.md)
-2. [Työaikakirjanpito](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/tuntikirjanpito.md)
+Sovellus on hyvin perinteinen tietokonepeli, jossa pelaaja pyrkii ampumaan vastustajien armeijan ennen kuin nämä ehtivät laskeutua maahan ja tuhota maan. Pelistä on useita eri versioita, joissa vastustajien ja pelaajien lukumäärä, vauhti, graafiset ominaisuudet ja kenttien määrä vaihtelevat. Pohjimmainen idea on kuitenkin aina sama, pelalajan alus liikkuu kentän alareunassa vasemmalle ja oikealle kun taas vihollisalukset liikkuvat pelikenttää reunasta toiseen, aina reunaan päästessän laskeutuen yhden pykälän. Ainakin pelaaja pystyy ampumaan, mahdollisesti myös viholliset.
 
-### Viikko 3
-- 
+## Dokumentaatio
 
+ [Vaativuusmäärittely](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/vaativuusmaarittely.md)
+ 
+ [Työaikakirjanpito](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/tuntikirjanpito.md)
 
 
 ## Laskarit
-### Viikko 1
-- [komentorivi.txt](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko1/komentorivi.txt)
-- [gitlog.txt](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko1/gitlog.txt)
+### Viikko 1-
+- komentorivi
+- gitlog
 
 ### Viikko 2
-- Unicafe-sovellus, [testien luominen](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko2/Unicafe/src/test/java/com/mycompany/unicafe/KassapaateTest.java) ja [testikattavuus](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko2/testikattavuus_unicafe.pdf)
+- testien luominen ja testikattavuus
 
 ### Viikko 3
 - Luokkakaaviot, [Monopoli](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko3/Monopoli.jpg)
