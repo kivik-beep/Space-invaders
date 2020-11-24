@@ -21,7 +21,25 @@ Kun peli loppuu palataan alkunäkymään.
 
 Lähdetään hyvin yksinkertaisesta suunnitelmasta, mutta todennäköisesti osa jatkokehitysideoista otetaan käyttöön jo pelin aiemmassa versiossa.
 
-
+tehty | ohjelman osa
+----| ----------
+  x | pelikenttä
+  -| alkunäkymä
+   | **hahmot**
+ x | alus
+ x | ammus
+ x | vihollinen
+   | **liikkeet**
+ x | pelaaja vasen-oikea
+  -| ammus - ylös 
+  -| vihollinen sivut+alas
+  -| liikkeet ei voi mennä yli kentän
+   | **muut**
+  -| osuma aiheuttaa kuoleman
+  -| vihollinen maassa lopettaa pelin
+  -| uusi taso kun edellinen on loppu?
+  -| ennätykset?
+   
 ### Jatkokehitys:
 - Pelikenttää suurentamalla ja vihollisten määrää lisäämällä pelistä saa tehtyä vaikeamman
 - Tason loppuessa voi alkaa uusi taso joka on hiukan edellistä nopeampi
