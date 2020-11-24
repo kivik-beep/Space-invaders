@@ -9,6 +9,8 @@ Sovellus on hyvin perinteinen tietokonepeli, jossa pelaaja pyrkii ampumaan vastu
  [Vaativuusmäärittely](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/vaativuusmaarittely.md)
  
  [Työaikakirjanpito](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/tuntikirjanpito.md)
+ 
+ [Arkkitehtuurikuvaus](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
 
 
 
