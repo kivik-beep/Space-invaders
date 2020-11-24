@@ -3,12 +3,12 @@ Tavoitteena on tehdä space invaders peli.
 
 ### Pelissä on kolme osaa:
 1. Pelikenttä
-	- 15x15 neliön mallinen pohja
+	- neliön mallinen pohja
 2. pelaajan ohjaama alus (*yksinkertainen muoto esim kolmio*)
 	- liikkuu yhdellä rivillä edestakaisin (*nuolinäppäimillä*)
 	- ampuu (space) (*ammus kuutio*)
 3. vihollisalukset (*yksinkertainen selvästi pelaajan aluksesta poikkeava muoto*)
-	- 3x10 vihollisen rivit jotka liikkuvat pelialuetta reunasta toiseen
+	- vihollisen rivit jotka liikkuvat pelialuetta reunasta toiseen
 	- kun saapuvat reunaan, lasketuvat yhden rivin alaspäin 
 
 Pelin avatessa tulee aloitusnäkymä jonka kuittaamalla peli lähtee käyntiin
@@ -33,12 +33,16 @@ tehty | ohjelman osa
  x | pelaaja vasen-oikea
   -| ammus - ylös 
   -| vihollinen sivut+alas
-  -| liikkeet ei voi mennä yli kentän
+  x| liikkeet ei voi mennä yli kentän
    | **muut**
   -| osuma aiheuttaa kuoleman
   -| vihollinen maassa lopettaa pelin
   -| uusi taso kun edellinen on loppu?
   -| ennätykset?
+  
+  Hahmotelma liikeradoista: 
+  
+   ![hahmojen liikeradat](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/liikkeet.png)
    
 ### Jatkokehitys:
 - Pelikenttää suurentamalla ja vihollisten määrää lisäämällä pelistä saa tehtyä vaikeamman
