@@ -11,17 +11,4 @@ Sovellus on hyvin perinteinen tietokonepeli, jossa pelaaja pyrkii ampumaan vastu
  [Työaikakirjanpito](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/tuntikirjanpito.md)
 
 
-## Laskarit
-### Viikko 1-
-- komentorivi
-- gitlog
-
-### Viikko 2
-- testien luominen ja testikattavuus
-
-### Viikko 3
-- Luokkakaaviot, [Monopoli](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko3/Monopoli.jpg)
-- Sekvenssikaaviot [Kone ja koneisto](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/laskarit/viikko3/Sekvenssikaavio.png)
-
-
 
