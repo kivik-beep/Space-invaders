@@ -16,14 +16,14 @@ import spaceinvaders.domain.Spaceship;
 
 public class Start extends Application {
 
-    public static int WIDTH = 500;
-    public static int HEIGHT = 500;
+    public static int width = 500;
+    public static int height = 500;
     private Pane board = new Pane();
-    private Spaceship player = new Spaceship(WIDTH / 2, HEIGHT - 10);
+    private Spaceship player = new Spaceship(width / 2, height - 10);
     public int level = 3;
 
     public void create() {
-        board.setPrefSize(WIDTH, HEIGHT);
+        board.setPrefSize(width, height);
         board.getChildren().add(player.getCharacter());
 
     }
@@ -67,7 +67,7 @@ public class Start extends Application {
                 }
                 if (buttons.getOrDefault(KeyCode.SPACE, false)) {
 
-                    Shot bullet = new Shot((int) player.getCharacter().getTranslateX(), HEIGHT - 60);
+                    Shot bullet = new Shot((int) player.getCharacter().getTranslateX(), height - 60);
                     board.getChildren().add(bullet.getCharacter());
                     bullet.moveUp();
                 }

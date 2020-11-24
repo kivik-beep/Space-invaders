@@ -26,11 +26,11 @@ public abstract class Character {
         //way>0 = right
         this.character.setTranslateX(this.character.getTranslateX() + way);
         
-        if(this.character.getTranslateX()> 480){
+        if (this.character.getTranslateX() > 480) {
             this.character.setTranslateX(480);
         }
         
-        if(this.character.getTranslateX()< 20){
+        if (this.character.getTranslateX() < 20) {
             this.character.setTranslateX(20);
         }
     }
@@ -42,13 +42,16 @@ public abstract class Character {
     public void moveDown() {
         //invader (&invader ammo?)
         this.character.setTranslateY(this.character.getTranslateY() + 2);
+        if (this.character.getTranslateY() > 10) {
+            this.character.setTranslateY(10);
+        }
     }
     
  
 
     public boolean alive() {
-        if (this.character.getTranslateY()<0){
-            this.alive=false;
+        if (this.character.getTranslateY() < 0) {
+            this.alive = false;
         }
         return this.alive;
     }

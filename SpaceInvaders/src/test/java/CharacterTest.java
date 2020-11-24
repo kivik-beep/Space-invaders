@@ -7,6 +7,8 @@
 import javafx.scene.shape.Polygon;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 import spaceinvaders.domain.Invader;
@@ -29,10 +31,6 @@ public class CharacterTest {
 
     @After
     public void tearDown() {
-    }
-
-    @Test
-    public void hello() {
     }
 
     @Test
@@ -73,13 +71,36 @@ public class CharacterTest {
 
     @Test
     public void movingOutOfBoundsKillsShot(){
-        int mover= 1;
+        int counter = 1;
         
-        while (mover<510){
+        while (counter <510){
         shot.moveUp();
-        mover++;  
+        counter ++;  
         }
         
         assertEquals(false, shot.alive());
+    }
+    
+    @Test
+    public void characterStaysOnBoardDown() {
+        int counter = 1;
+        
+        while (counter <510){
+        shot.moveDown();
+        counter ++;  
+        }
+        assertEquals(10, shot.getCharacter().getTranslateY(), DELTA);
+    }
+    
+    public void booleanAliveWorks(){
+        int counter = 1;
+        
+        while (counter <510){
+        shot.moveUp();
+        counter ++;  
+        }
+        
+        assertTrue(spaceship.alive());
+        assertFalse(shot.alive());
     }
 }
