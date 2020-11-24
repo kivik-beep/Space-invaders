@@ -13,5 +13,6 @@ päivä | aika | mitä tein
 24.11. | 2 | arkkitehtuurin esityksen luominen
 24.11. | 1 | tuntikirjanpidon ja vaatimusmäärittelyn päivitys
 24.11. | 1 | liikeratojen esityksen lisäys dokumentaatioon
-24.11. | 5 | liikeiden ja niiden rajojen luontia + luodun testaus
+24.11. | 3 | liikeiden ja niiden rajojen luontia + luodun testaus
+24.11. | 2 | käyttöjärjestelmän jako pienempiin osiin
 **yht.** | **27**
