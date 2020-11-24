@@ -28,6 +28,7 @@ hahmot joiden pitää osata liikkua itsenäisesti (eli shot ja Invader) määrit
 Hahmoilla on myös boolean-arvo joka kertoo ovatko ne hengissä vai ei. Tämän toiminnallisuus mietitään myöhemmin pidemmälle.
 
 Hahmotelma luokka/pakkauskaaviosta:
+
 ![](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/luokkakaavio.png)
 
 ## Tietojen pysyväistalletus
