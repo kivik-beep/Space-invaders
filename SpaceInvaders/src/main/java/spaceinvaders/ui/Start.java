@@ -20,6 +20,7 @@ public class Start extends Application {
     public static int HEIGHT = 500;
     private Pane board = new Pane();
     private Spaceship player = new Spaceship(WIDTH / 2, HEIGHT - 10);
+    public int level = 3;
 
     public void create() {
         board.setPrefSize(WIDTH, HEIGHT);
@@ -32,12 +33,21 @@ public class Start extends Application {
         create();
         Scene scene = new Scene(board);
 
-        List <Invader> enemies = new ArrayList<>();
-        for (int i = 0; i< 5; i++){
-        Invader enemy = new Invader((460-i*60), 40);
-        enemies.add(enemy);
-        }
-        enemies.forEach(enemy -> board.getChildren().add(enemy.getCharacter()));
+        createInvaders();
+        animate(scene);
+
+        stage.setTitle(
+                "! ! Space invaders ! !");
+        stage.setScene(scene);
+
+        stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    public void animate(Scene scene) {
 
         Map<KeyCode, Boolean> buttons = new HashMap<>();
         scene.setOnKeyPressed(event -> {
@@ -46,7 +56,6 @@ public class Start extends Application {
         scene.setOnKeyReleased(event -> {
             buttons.put(event.getCode(), Boolean.FALSE);
         });
-
         new AnimationTimer() {
             @Override
             public void handle(long l) {
@@ -64,16 +73,19 @@ public class Start extends Application {
                 }
             }
         }.start();
-
-        stage.setTitle(
-                "! ! Space invaders ! !");
-        stage.setScene(scene);
-
-        stage.show();
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
+    public void createInvaders() {
+        List<Invader> enemies = new ArrayList<>();
+        for (int a = 0; a < level; a++) {
+            int y = 40 + a * 50;
+            for (int i = 0; i < 5; i++) {
+                Invader enemy = new Invader((460 - i * 50), y);
+                enemies.add(enemy);
+            }
+        }
 
+        enemies.forEach(enemy -> board.getChildren().add(enemy.getCharacter()));
+
+    }
 }

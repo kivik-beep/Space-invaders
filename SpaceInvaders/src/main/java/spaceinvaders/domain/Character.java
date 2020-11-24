@@ -2,7 +2,6 @@ package spaceinvaders.domain;
 
 import javafx.geometry.Point2D;
 import javafx.scene.shape.Polygon;
-import javafx.scene.shape.Shape;
 
 public abstract class Character {
 
@@ -14,7 +13,7 @@ public abstract class Character {
         this.character = shape;
         this.character.setTranslateX(x);
         this.character.setTranslateY(y);
-        this.movement = new Point2D(0, 0);
+        this.movement = new Point2D(0, 2);
         this.alive = true;
     }
 
