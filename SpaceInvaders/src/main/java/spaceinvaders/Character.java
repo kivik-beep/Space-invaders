@@ -28,14 +28,7 @@ public abstract class Character {
     }
 
     public void moveUp() {
-        // ammo
-       /* int shot = 50;
-        for(int i = 0; i < shot; i++){
-            this.movement = this.movement.add(0, 0);
-            this.character.setTranslateY(this.character.getTranslateY() + this.movement.getY());
-            
-            
-        }*/
+        this.character.setTranslateY(this.character.getTranslateY() - 5); 
     }
 
     public void moveDown() {

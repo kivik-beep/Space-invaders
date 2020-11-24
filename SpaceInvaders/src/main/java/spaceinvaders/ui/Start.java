@@ -23,11 +23,10 @@ public class Start extends Application {
         board.setPrefSize(WIDTH, HEIGHT);
 
         Spaceship ship = new Spaceship(WIDTH / 2, HEIGHT - 10);
-
-        Invader enemy = new Invader(WIDTH / 2, 40);
-
         board.getChildren().add(ship.getCharacter());
 
+        
+        Invader enemy = new Invader(WIDTH / 2, 40);
         board.getChildren().add(enemy.getCharacter());
 
         Scene scene = new Scene(board);
@@ -52,11 +51,8 @@ public class Start extends Application {
                 if (buttons.getOrDefault(KeyCode.SPACE, false)) {
                     Shot ammo = new Shot((int) ship.getCharacter().getTranslateX(), HEIGHT - 60);
                     board.getChildren().add(ammo.getCharacter());
-                    ammo.moveUp();
                 }
-
             }
-
         }.start();
 
         stage.setTitle(
