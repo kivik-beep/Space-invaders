@@ -8,9 +8,9 @@ import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import spaceinvaders.Invader;
-import spaceinvaders.Shot;
-import spaceinvaders.Spaceship;
+import spaceinvaders.domain.Invader;
+import spaceinvaders.domain.Shot;
+import spaceinvaders.domain.Spaceship;
 
 public class Start extends Application {
 

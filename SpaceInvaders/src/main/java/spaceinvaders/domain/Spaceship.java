@@ -1,5 +1,5 @@
 
-package spaceinvaders;
+package spaceinvaders.domain;
 
 import javafx.scene.shape.Polygon;
 

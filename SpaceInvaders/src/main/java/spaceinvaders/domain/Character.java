@@ -1,4 +1,4 @@
-package spaceinvaders;
+package spaceinvaders.domain;
 
 import javafx.geometry.Point2D;
 import javafx.scene.shape.Polygon;

@@ -10,9 +10,9 @@ import org.junit.After;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
-import spaceinvaders.Invader;
-import spaceinvaders.Shot;
-import spaceinvaders.Spaceship;
+import spaceinvaders.domain.Invader;
+import spaceinvaders.domain.Shot;
+import spaceinvaders.domain.Spaceship;
 
 public class CharacterTest {
     Spaceship spaceship;
