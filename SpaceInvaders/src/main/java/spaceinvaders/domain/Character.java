@@ -2,10 +2,11 @@ package spaceinvaders.domain;
 
 import javafx.geometry.Point2D;
 import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Shape;
 
 public abstract class Character {
 
-    private Polygon character;
+    Polygon character;
     private Point2D movement;
     private boolean alive;
 
@@ -24,11 +25,19 @@ public abstract class Character {
     public void move(int way) {
         //way<0 = left
         //way>0 = right
-        this.character.setTranslateX(this.character.getTranslateX() + way);    
+        this.character.setTranslateX(this.character.getTranslateX() + way);
+        
+        if(this.character.getTranslateX()> 480){
+            this.character.setTranslateX(480);
+        }
+        
+        if(this.character.getTranslateX()< 20){
+            this.character.setTranslateX(20);
+        }
     }
 
     public void moveUp() {
-        this.character.setTranslateY(this.character.getTranslateY() - 5); 
+        this.character.setTranslateY(this.character.getTranslateY() - 2);
     }
 
     public void moveDown() {
@@ -39,7 +48,11 @@ public abstract class Character {
  
 
     public boolean alive() {
+        if (this.character.getTranslateY()<0){
+            this.alive=false;
+        }
         return this.alive;
     }
+    
 
 }

@@ -1,6 +1,8 @@
 package spaceinvaders.ui;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
@@ -16,20 +18,26 @@ public class Start extends Application {
 
     public static int WIDTH = 500;
     public static int HEIGHT = 500;
+    private Pane board = new Pane();
+    private Spaceship player = new Spaceship(WIDTH / 2, HEIGHT - 10);
+
+    public void create() {
+        board.setPrefSize(WIDTH, HEIGHT);
+        board.getChildren().add(player.getCharacter());
+
+    }
 
     @Override
     public void start(Stage stage) throws Exception {
-        Pane board = new Pane();
-        board.setPrefSize(WIDTH, HEIGHT);
-
-        Spaceship ship = new Spaceship(WIDTH / 2, HEIGHT - 10);
-        board.getChildren().add(ship.getCharacter());
-
-        
-        Invader enemy = new Invader(WIDTH / 2, 40);
-        board.getChildren().add(enemy.getCharacter());
-
+        create();
         Scene scene = new Scene(board);
+
+        List <Invader> enemies = new ArrayList<>();
+        for (int i = 0; i< 5; i++){
+        Invader enemy = new Invader((460-i*60), 40);
+        enemies.add(enemy);
+        }
+        enemies.forEach(enemy -> board.getChildren().add(enemy.getCharacter()));
 
         Map<KeyCode, Boolean> buttons = new HashMap<>();
         scene.setOnKeyPressed(event -> {
@@ -43,14 +51,16 @@ public class Start extends Application {
             @Override
             public void handle(long l) {
                 if (buttons.getOrDefault(KeyCode.LEFT, false)) {
-                    ship.move(-2);
+                    player.move(-2);
                 }
                 if (buttons.getOrDefault(KeyCode.RIGHT, false)) {
-                    ship.move(2);
+                    player.move(2);
                 }
                 if (buttons.getOrDefault(KeyCode.SPACE, false)) {
-                    Shot ammo = new Shot((int) ship.getCharacter().getTranslateX(), HEIGHT - 60);
-                    board.getChildren().add(ammo.getCharacter());
+
+                    Shot bullet = new Shot((int) player.getCharacter().getTranslateX(), HEIGHT - 60);
+                    board.getChildren().add(bullet.getCharacter());
+                    bullet.moveUp();
                 }
             }
         }.start();
