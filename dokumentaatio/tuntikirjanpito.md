@@ -12,4 +12,6 @@ päivä | aika | mitä tein
 24.11. | 2 | checkstylen käyttöönotto ja testaus
 24.11. | 2 | arkkitehtuurin esityksen luominen
 24.11. | 1 | tuntikirjanpidon ja vaatimusmäärittelyn päivitys
-24.11. | 8 | liikeiden luontia + luodun testaus
+24.11. | 1 | liikeratojen esityksen lisäys dokumentaatioon
+24.11. | 5 | liikeiden ja niiden rajojen luontia + luodun testaus
+**yht.** | **27**
