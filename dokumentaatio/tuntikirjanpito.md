@@ -20,5 +20,5 @@ päivä | aika | mitä tein
 1.12. | 2 | käyttöliittymän purkaminen sovelluslogiikan eriyttämiseksi
 1.12. | 1 | testien, checkstylen ja jar-kansion tarkastus
 1.12. | 2 | sekvenssikaavion luonti
-1.12. | 2 | github release ja README:n parantelu
-**yht.** | **36**
+1.12. | 1 | github release ja README:n parantelu
+**yht.** | **35**
