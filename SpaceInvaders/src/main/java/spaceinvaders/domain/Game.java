@@ -70,7 +70,7 @@ public class Game {
                 enemies.forEach(enemy -> enemy.move());
                 bullets.forEach(shot -> shot.moveUp());
                 
-                if (enemies.get(enemies.size()-1).character.getTranslateY() > 420) {
+                if (enemies.get(enemies.size() - 1).character.getTranslateY() > 420) {
                     stop();
                 }
             }

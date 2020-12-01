@@ -85,11 +85,11 @@ public class CharacterTest {
     public void characterStaysOnBoardDown() {
         int counter = 1;
         
-        while (counter <510){
-        shot.moveDown();
+        while (counter < 510) {
+        shot.moveDown(2);
         counter ++;  
         }
-        assertEquals(10, shot.getCharacter().getTranslateY(), DELTA);
+        assertEquals(500, shot.getCharacter().getTranslateY(), DELTA);
     }
     
     public void booleanAliveWorks(){
@@ -102,5 +102,5 @@ public class CharacterTest {
         
         assertTrue(spaceship.alive());
         assertFalse(shot.alive());
-    }
+    }    
 }
