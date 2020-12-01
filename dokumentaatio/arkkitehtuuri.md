@@ -35,5 +35,11 @@ Hahmotelma luokka/pakkauskaaviosta:
 Lopetusnäkymään on tavoitteena saada myöhemmin ennätysnäkymä, johon myös uuden ennätyksen saanut pelaaja voi syöttää nimimerkkinsä.
 Ennätykset tullaan siis tallentamaan jonkinlaiseen tiedostoon, josta niitä voi kutsua.
 
+### Päätoiminnallisuudet
+Käyttöliittymän purkamisen yhteydessä osa käyttöliittymästä sekoittui sovelluslogiikkaan, korjaan tätä ensiviikolla. 
+Ohjelman sekvenssikaavio tämän hetken toiminnalla näyttää kutakuinkin tältä:
+
+![](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/sekvenssikaavio.png)
+
 ## Ojelman rakenteen heikkoudet
 se ei vielä toimi
