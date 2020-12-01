@@ -17,9 +17,15 @@ Pelin avatessa tulee aloitusnäkymä jonka kuittaamalla peli lähtee käyntiin
 Toiminnallisuus: 
 Pelin tavoitteena on ehtiä ampua kaikki viholliset ennen kuin aika loppuu, eli viholliset ehtivät alimmalle riville.
 Pelaajan aloittaessa pelin peli alkaa.
-Kun peli loppuu palataan alkunäkymään. 
 
-Lähdetään hyvin yksinkertaisesta suunnitelmasta, mutta todennäköisesti osa jatkokehitysideoista otetaan käyttöön jo pelin aiemmassa versiossa.
+Vihollisia on 5kpl rivissä, ja aina kun viholliset on ammuttu siirrytään seuraavalle tasolle.
+Vihollisrivien määrä vastaa tasoa, eli ensimmäisellä tasolla yksi rivi, toisella kaksi jne. 
+
+Kun peli loppuu palataan alkunäkymään, jossa on mahdollista nähdä ennätyslista. 
+
+
+### Viikolla 5
+Tämän viikon uudet toiminnallisuudet näkyvät paksunnettuna alla. 
 
 tehty | ohjelman osa
 ----| ----------
@@ -31,14 +37,16 @@ tehty | ohjelman osa
  x | vihollinen
    | **liikkeet**
  x | pelaaja vasen-oikea
-  -| ammus - ylös 
-  -| vihollinen sivut+alas
+  **x**| ammus - ylös 
+  **x**| vihollinen sivut+alas
   x| liikkeet ei voi mennä yli kentän
    | **muut**
   -| osuma aiheuttaa kuoleman
-  -| vihollinen maassa lopettaa pelin
-  -| uusi taso kun edellinen on loppu?
-  -| ennätykset?
+  **x**| vihollinen maassa lopettaa pelin
+  -| uusi taso kun edellinen on loppu
+  -| ennätykset
+  
+  *Valitettavasti käyttöliittymän ja sovelluslogiikan eriyttämisessä tällä viikolla meni hieman sovelluslogiikka ja käyttöliittymä sekaisin.Game-olio olisi kenties kannattanut luoda omaksi stage-oliokseen käyttöliittymään Startin rinnalle, tulen korjaamaan tätä ongelmaa ensiviikon palautukseen (kunhan keksin miten se kannattaa toteuttaa).*
   
   Hahmotelma liikeradoista: 
   
