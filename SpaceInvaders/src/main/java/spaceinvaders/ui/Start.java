@@ -1,40 +1,35 @@
 package spaceinvaders.ui;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import spaceinvaders.domain.Invader;
-import spaceinvaders.domain.Shot;
+import spaceinvaders.domain.Game;
 import spaceinvaders.domain.Spaceship;
 
 public class Start extends Application {
 
     public static int width = 500;
     public static int height = 500;
-    private Pane board = new Pane();
-    private Spaceship player = new Spaceship(width / 2, height - 10);
+    private final Pane board = new Pane();
+    private final Spaceship player = new Spaceship(width / 2, height - 10);
     public int level = 3;
+    public Game game = new Game(level, board, player);
 
     public void create() {
         board.setPrefSize(width, height);
         board.getChildren().add(player.getCharacter());
-
+        
     }
 
     @Override
     public void start(Stage stage) throws Exception {
         create();
         Scene scene = new Scene(board);
+        
+        game.start();        
 
-        createInvaders();
-        animate(scene);
+        game.animate(scene);
 
         stage.setTitle(
                 "! ! Space invaders ! !");
@@ -47,7 +42,7 @@ public class Start extends Application {
         launch(args);
     }
 
-    public void animate(Scene scene) {
+  /*  public void animate(Scene scene) {
 
         Map<KeyCode, Boolean> buttons = new HashMap<>();
         scene.setOnKeyPressed(event -> {
@@ -73,19 +68,5 @@ public class Start extends Application {
                 }
             }
         }.start();
-    }
-
-    public void createInvaders() {
-        List<Invader> enemies = new ArrayList<>();
-        for (int a = 0; a < level; a++) {
-            int y = 40 + a * 50;
-            for (int i = 0; i < 5; i++) {
-                Invader enemy = new Invader((460 - i * 50), y);
-                enemies.add(enemy);
-            }
-        }
-
-        enemies.forEach(enemy -> board.getChildren().add(enemy.getCharacter()));
-
-    }
+    }*/
 }

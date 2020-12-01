@@ -39,10 +39,10 @@ public abstract class Character {
         this.character.setTranslateY(this.character.getTranslateY() - 2);
     }
 
-    public void moveDown() {
+    public void moveDown(int y) {
         //invader (&invader ammo?)
-        this.character.setTranslateY(this.character.getTranslateY() + 2);
-        if (this.character.getTranslateY() > 10) {
+        this.character.setTranslateY(this.character.getTranslateY() + y);
+        if (this.character.getTranslateY() < 10) {
             this.character.setTranslateY(10);
         }
     }
