@@ -22,5 +22,9 @@ public class Invader extends Character {
             moveDown(25);
         }
     }
+    
+    public double getY() {
+        return this.character.getTranslateY();
+    }
 
 }
