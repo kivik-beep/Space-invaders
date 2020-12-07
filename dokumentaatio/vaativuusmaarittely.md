@@ -24,29 +24,29 @@ Vihollisrivien määrä vastaa tasoa, eli ensimmäisellä tasolla yksi rivi, toi
 Kun peli loppuu palataan alkunäkymään, jossa on mahdollista nähdä ennätyslista. 
 
 
-### Viikolla 5
+### Viikolla 6
 Tämän viikon uudet toiminnallisuudet näkyvät paksunnettuna alla. 
 
 tehty | ohjelman osa
 ----| ----------
   x | pelikenttä
-  -| alkunäkymä
+  **x**| alkunäkymä
+  -| loppunäkymä
    | **hahmot**
  x | alus
  x | ammus
  x | vihollinen
    | **liikkeet**
  x | pelaaja vasen-oikea
-  **x**| ammus - ylös 
-  **x**| vihollinen sivut+alas
+  x| ammus - ylös 
+  x| vihollinen sivut+alas
   x| liikkeet ei voi mennä yli kentän
    | **muut**
   -| osuma aiheuttaa kuoleman
-  **x**| vihollinen maassa lopettaa pelin
+  x| vihollinen maassa lopettaa pelin
   -| uusi taso kun edellinen on loppu
   -| ennätykset
   
-  *Valitettavasti käyttöliittymän ja sovelluslogiikan eriyttämisessä tällä viikolla meni hieman sovelluslogiikka ja käyttöliittymä sekaisin.Game-olio olisi kenties kannattanut luoda omaksi stage-oliokseen käyttöliittymään Startin rinnalle, tulen korjaamaan tätä ongelmaa ensiviikon palautukseen (kunhan keksin miten se kannattaa toteuttaa).*
   
   Hahmotelma liikeradoista: 
   
