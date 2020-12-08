@@ -3,11 +3,11 @@
 ## Rakenne
 Koodin pakkausrakenne on seuraava:
 
-spaceinvaders.ui ---> spaceinvaders.domain ---> spaceinvaders.dao
+![](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/pakkausrakenne.png)
 
-Pakkaus spaceinvaders.ui sisältää käyttöliittymän, 
+Pakkaus spaceinvaders.ui sisältää JavaFX:llä toteutetun käyttöliittymän, 
 spaceinvaders.domain sovelluslogiikan 
-ja spaceinvaders.dao tietojen pysyväistalletuksen *(sitten kun se on ajankohtaista)*
+ja spaceinvaders.dao tietojen pysyväistalletuksen *(dao toistaiseksi luomatta)*
 
 ## Käyttöliittymä
 
@@ -16,16 +16,16 @@ Käyttöliittymä sisältää kolme erilaista näkymää
 - pelinäkymä
 - lopetusnäkymä
 
-Pyrin luomaan pelinäkymän mahdollisimman valmiiksi ennen toisten näkymien luontia. 
+Kukin näistä on oma Scene-olionsa. Näkymät tulevat yksi kerrallaan näkyville sovelluksen stageen.
+Käyttöliittymä on eriytetty mahdollisimman erilleen sovelluslogiikasta. 
 
-Käyttöliittymä on koitettu saada mahdollisimman erilleen sovelluslogiikasta. 
+Aloitusnäkymästä siirrytään pelinäkymään pelaajan painaessa aloitusnappulaa. Kun pelaajan hahmo on tuhoutunut, siirtyy näkymäksi lopetusnäkymä.
 
 ## Sovelluslogiikka
-Sovelluslogiikan merkittävin osa on hahmo, eli luokka Character. Kaikki liikkeet on ohjelmoitu tähän luokkaan. 
-Hahmon alaluokkat Invader, Shot ja Ship rakentavat pelin liikkuvat osat. Alaluokat määrittelevät kunkin hahmon muodon, lisäksi 
-hahmot joiden pitää osata liikkua itsenäisesti (eli shot ja Invader) määritetään niiden omat liikeradat.
+Sovelluksessa on kolmea eri hahmotyyppiä; alus, invader ja ammus. 
+Hahmot luodaan niiden omissa luokissa, jotka ovat yleisen Character-luokan aliluokkia. Character määrittää liikkeet, joita kukin hahmo käyttää tarvitsemallaan tavalla. 
 
-Hahmoilla on myös boolean-arvo joka kertoo ovatko ne hengissä vai ei. Tämän toiminnallisuus mietitään myöhemmin pidemmälle.
+Pelaamisen pohjustamiseen tehty Game-luokka alustaa pelin, eli luo tarvittavan vihollisarmeijan ja muut hahmot. Game-luokkaa käytetään keskusteluun käyttöliittymän kanssa. *Tulevaa: Kun pelaaja on läpäissyt tason, asettaa luokka Game uuden tason pelattavaksi. Game sisältää siis myös pelaajan tiedot ennätyksen kirjaamiseksi, ja välittää tämän tiedon dao:on. Dao:n toiminta vielä tarkemmin suunnittelematta.*
 
 Hahmotelma luokka/pakkauskaaviosta:
 
@@ -33,13 +33,15 @@ Hahmotelma luokka/pakkauskaaviosta:
 
 ## Tietojen pysyväistalletus
 Lopetusnäkymään on tavoitteena saada myöhemmin ennätysnäkymä, johon myös uuden ennätyksen saanut pelaaja voi syöttää nimimerkkinsä.
-Ennätykset tullaan siis tallentamaan jonkinlaiseen tiedostoon, josta niitä voi kutsua.
+Ennätykset tullaan siis tallentamaan jonkinlaiseen tiedostoon, josta niitä voi kutsua. Kuten yllä todettu, pysyväistalletus vielä toteuttamatta.
 
-### Päätoiminnallisuudet
-Käyttöliittymän purkamisen yhteydessä osa käyttöliittymästä sekoittui sovelluslogiikkaan, korjaan tätä ensiviikolla. 
-Ohjelman sekvenssikaavio tämän hetken toiminnalla näyttää kutakuinkin tältä:
+## Päätoiminnallisuudet
+Ohjelman sekvenssikaavio viikolta 5 ei enää vastaa todellisuutta, mutta antaa silti hyvää osviittaa miten sovelluslogiikka ohjelmassa toimii:
 
 ![](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/sekvenssikaavio.png)
 
-## Ojelman rakenteen heikkoudet
-se ei vielä toimi
+Tulen päivittämään ohjelman päätoiminnallisuuksia myöhemmin. 
+
+## Ohjelman rakenteen heikkoudet
+### sovelluslogiikka
+Sovelluslogiikassa olevat hahmot ovat luotu JavaFX:n Polygoneina omissa luokissaan, näiden Polygonin luonnit olisi ilmeisesti ollut hyvä saada käyttöliittymän puolelle. Tämä tuli esiin itselle viikolla 6, ja ongelman korjaaminen tässä vaiheessa saattaisi aiheuttaa suuria ongelmia muussa toiminnallisuudessa ja häiritä sovelluksen muiden, tärkeämpien osien etenemistä loppupalautusta varten toivomalleni tasolle. Muutoin käyttöliittymän osia ei ole sovelluslogiikan puolella.
