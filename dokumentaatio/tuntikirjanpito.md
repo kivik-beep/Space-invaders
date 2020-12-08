@@ -24,5 +24,9 @@ päivä | aika | mitä tein
 7.12. | 1 | toisen näkymän lisäys
 7.12. | 4 | käyttöliittymän eriyttäminen sovelluslogiikasta 
 8.12. | 2 | testien luomista
-8.12. | 2 | JavaDociin tutustumista
-**yht.** | **44**
+8.12. | 1 | JavaDociin tutustumista
+8.12. | 3 | JavaDocin luominen ja liittäminen checkstyleen
+8.12. | 1 | JavaDocin aiheuttamien checkstyle virheiden korjaus
+8.12. | 2 | arkkitehtuurikuvauksen ja käyttöohjeen luominen
+8.12. | 3 | ohjelman toimintojen kehittely
+**yht.** | **52**
