@@ -78,12 +78,17 @@ public abstract class Character {
         }
         return this.alive;
     }
-    
-    public boolean collapse(Character another){
+/**
+ * This method is used to erase characters after collapsing each other.
+ * 
+ * @param another the character that is being crashed to
+ * @return confirmation of the crash
+ */
+    public boolean collapse(Character another) {
         Shape collapseArea = Shape.intersect(character, another.getCharacter());
         return collapseArea.getBoundsInLocal().getWidth() != -1;
     }
-    
+
     public void setAlive(boolean alive) {
         this.alive = alive;
     }
