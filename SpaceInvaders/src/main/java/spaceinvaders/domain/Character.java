@@ -6,8 +6,8 @@ import javafx.scene.shape.Polygon;
 public abstract class Character {
 
     Polygon character;
-    Point2D movement;
-    boolean alive;
+    private Point2D movement;
+    private boolean alive;
 
     public Character(Polygon shape, int x, int y) {
         this.character = shape;
