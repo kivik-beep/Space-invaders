@@ -23,4 +23,7 @@ päivä | aika | mitä tein
 **yht.** | **35**
 7.12. | 1 | toisen näkymän lisäys
 7.12. | 4 | käyttöliittymän eriyttäminen sovelluslogiikasta 
+8.12. | 2 | testien luomista
+8.12. | 2 | JavaDociin tutustumista
+
 **yht.** | **40**
