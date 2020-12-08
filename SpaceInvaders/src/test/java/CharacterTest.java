@@ -38,6 +38,7 @@ public class CharacterTest {
 
         Polygon ship = new Polygon(-20, 0, 20, 0, 0, -45);
         Polygon testShip = spaceship.getCharacter();
+
     }
 
     @Test
@@ -60,8 +61,7 @@ public class CharacterTest {
         spaceship.move(2000);
         assertEquals(480, spaceship.getCharacter().getTranslateX(), DELTA);
     }
-    
-    
+
     @Test
     public void playerStaysOnBoardLeft() {
         spaceship.move(-2000);
@@ -70,37 +70,55 @@ public class CharacterTest {
     }
 
     @Test
-    public void movingOutOfBoundsKillsShot(){
+    public void movingOutOfBoundsKillsShot() {
         int counter = 1;
-        
-        while (counter <510){
-        shot.moveUp();
-        counter ++;  
+
+        while (counter < 510) {
+            shot.moveUp();
+            counter++;
         }
-        
+
         assertEquals(false, shot.alive());
     }
-    
+
     @Test
     public void characterStaysOnBoardDown() {
         int counter = 1;
-        
+
         while (counter < 510) {
-        shot.moveDown(2);
-        counter ++;  
+            shot.moveDown(2);
+            counter++;
         }
         assertEquals(500, shot.getCharacter().getTranslateY(), DELTA);
     }
-    
-    public void booleanAliveWorks(){
+
+    @Test
+    public void booleanAliveWorks() {
         int counter = 1;
-        
-        while (counter <510){
-        shot.moveUp();
-        counter ++;  
+
+        while (counter < 510) {
+            shot.moveUp();
+            counter++;
         }
-        
+
         assertTrue(spaceship.alive());
         assertFalse(shot.alive());
-    }    
+    }
+
+    @Test
+    public void invaderMoveWorks(){
+        int counter = 1; 
+        //110 times (2) to side - followed by (25) down
+        while (counter < 450) {
+            invader.move();
+            counter++;
+        }
+        assertEquals(100, invader.getY(), DELTA);
+    }
+    
+    @Test
+    public void invaderGivesRightY(){
+        assertEquals(invader.getY(), invader.getCharacter().getTranslateY(), DELTA);
+    }
+
 }
