@@ -3,7 +3,7 @@
 ## Rakenne
 Koodin pakkausrakenne on seuraava:
 
-![](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/pakkausrakenne.png)
+![](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/pakkausrakenne.png)
 
 Pakkaus spaceinvaders.ui sisältää JavaFX:llä toteutetun käyttöliittymän, 
 spaceinvaders.domain sovelluslogiikan 
@@ -29,7 +29,7 @@ Pelaamisen pohjustamiseen tehty Game-luokka alustaa pelin, eli luo tarvittavan v
 
 Hahmotelma luokka/pakkauskaaviosta:
 
-![](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/luokkakaavio.png)
+<img src="https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/luokkakaavio.png" width="400">
 
 ## Tietojen pysyväistalletus
 Lopetusnäkymään on tavoitteena saada myöhemmin ennätysnäkymä, johon myös uuden ennätyksen saanut pelaaja voi syöttää nimimerkkinsä.
@@ -38,7 +38,7 @@ Ennätykset tullaan siis tallentamaan jonkinlaiseen tiedostoon, josta niitä voi
 ## Päätoiminnallisuudet
 Ohjelman sekvenssikaavio viikolta 5 ei enää vastaa todellisuutta, mutta antaa silti hyvää osviittaa miten sovelluslogiikka ohjelmassa toimii:
 
-![](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/sekvenssikaavio.png)
+<img src="https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/sekvenssikaavio.png" width="500">
 
 Tulen päivittämään ohjelman päätoiminnallisuuksia myöhemmin. 
 
