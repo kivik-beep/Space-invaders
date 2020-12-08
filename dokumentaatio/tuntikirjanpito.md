@@ -25,5 +25,4 @@ päivä | aika | mitä tein
 7.12. | 4 | käyttöliittymän eriyttäminen sovelluslogiikasta 
 8.12. | 2 | testien luomista
 8.12. | 2 | JavaDociin tutustumista
-
 **yht.** | **44**
