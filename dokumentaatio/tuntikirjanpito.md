@@ -26,4 +26,4 @@ päivä | aika | mitä tein
 8.12. | 2 | testien luomista
 8.12. | 2 | JavaDociin tutustumista
 
-**yht.** | **40**
+**yht.** | **44**
