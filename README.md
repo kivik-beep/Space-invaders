@@ -19,4 +19,41 @@ Tavoitteenani on JavaFX:ää käyttäen toteuttaa pelistä hyvin yksinkertainen 
 
 [Viikko 5](https://github.com/kivik-beep/ot-harjoitustyo/releases/tag/viikko5)
 
+Viikko 6
 
+## Komentorivitoiminnot
+### Testaus
+Testaus suoritetaan komennolla 
+```
+mvn test
+```
+Ja raportti testikattavuudesta komennolla 
+```
+mvn jacoco:report
+```
+Testikattavuusraportti tulee kansioon *target/site/jacoco* nimellä **index.html**
+
+### Suoritettavan jar ja sen käyttö
+```
+mvn package
+```
+luo hakemistoon *target* suoritettavan **jar-tiedoston SpaceInvaders-1.0-SNAPSHOT.jar**
+
+Hakemistossa target on jo valmiiksi suoritettava tiedosto *SpaceInvaders.jar*, joka on suoritettavissa komennolla
+```
+java -jar SpaceInvaders.jar
+```
+
+### JavaDoc
+Luodaan komennolla
+```
+mvn javadoc:javadoc
+```
+Javadoc tulee kansioon *target/site/apidocs* nimellä **index.html*
+
+### Checkstyle
+Suorittamalla komennon
+```
+mvn jxr:jxr checkstyle:checkstyle
+```
+tulee kansioon *target/site* **checkstyle.html** josta voi tarkistaa esiintyykö tekstin muotoilussa checkstyle.xml:ssä määriteltyjä virheitä.
