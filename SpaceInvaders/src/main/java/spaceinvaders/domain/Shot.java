@@ -4,7 +4,7 @@ import javafx.scene.shape.Polygon;
 
 public class Shot extends Character {
      /**
-     * Creates polygon to create new ammo-character
+     * Creates polygon to create new ammo-character.
      * @param x the x coordinates for ammo
      * @param y the y coordinates for ammo
      */  

@@ -8,7 +8,7 @@ public class Invader extends Character {
     private int range = 0;
 
     /**
-     * Creates polygon to create new invader-character
+     * Creates polygon to create new invader-character.
      *
      * @param x the x coordinates for invader
      * @param y the y coordinates for invader
@@ -18,7 +18,7 @@ public class Invader extends Character {
     }
 
     /**
-     * method to make invader move in right way
+     * method to make invader move in right way.
      */
     public void move() {
         this.move(way);
@@ -33,7 +33,7 @@ public class Invader extends Character {
     }
 
     /**
-     * invaders y coordinate is needed to end the game when invaders get to earth
+     * invaders y coordinate is needed to end the game when invaders get to earth.
      * @return y
      */
     public double getY() {

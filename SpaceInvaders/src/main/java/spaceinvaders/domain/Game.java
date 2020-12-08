@@ -10,12 +10,19 @@ public class Game {
     Spaceship player;
     List<Invader> enemies = new ArrayList<>();
 
+    /**
+     * Creates new game.
+     *
+     * @param level defines how many invaders is needed.
+     */
     public Game(int level) {
         this.level = level;
     }
 
+    /**
+     * Creates set of invaders based on the current level.
+     */
     public void createInvaders() {
-
         for (int a = 0; a < level; a++) {
             int y = 40 + a * 50;
             for (int i = 0; i < 5; i++) {
@@ -25,6 +32,9 @@ public class Game {
         }
     }
 
+    /**
+     * Creates new invaders and spaceship for the game.
+     */
     public void start() {
         createInvaders();
         this.player = new Spaceship(250, 490);
@@ -38,18 +48,34 @@ public class Game {
         return (ArrayList<Invader>) this.enemies;
     }
 
+    /**
+     * Returns invader from the invader list.
+     *
+     * @param i number of the invader
+     * @return the invader i
+     */
     public Invader invader(int i) {
         return this.enemies.get(i);
     }
-    
+
     public int getLevel() {
         return this.level;
     }
-    
+
+    /**
+     * Sets new value to gameOver.
+     *
+     * @param t value for is game over
+     */
     public void endGame(boolean t) {
         this.gameOver = t;
     }
-    
+
+    /**
+     * Tells has the player died or not.
+     *
+     * @return is the game over
+     */
     public boolean gameOver() {
         return this.gameOver;
     }

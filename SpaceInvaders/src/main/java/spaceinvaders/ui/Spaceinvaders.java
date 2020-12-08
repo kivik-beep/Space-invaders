@@ -3,10 +3,11 @@ package spaceinvaders.ui;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import spaceinvaders.domain.Game;
 
 /**
- *
+ * Space Invaders Game.
+ * 
+ * @version 2
  * @author kxkivi
  */
 public class Spaceinvaders extends Application {
@@ -15,6 +16,11 @@ public class Spaceinvaders extends Application {
     private Play play;
     private Start start;
 
+    /**
+     * Starts the user interface.
+     * 
+     * @param args 
+     */
     public static void main(String[] args) {
         launch(args);
     }

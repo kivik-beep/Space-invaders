@@ -6,7 +6,7 @@ public class Spaceship extends Character {
 
     //private List<Shot> shots = new ArrayList<>();
     /**
-     * Creates polygon to create new player-character
+     * Creates polygon to create new player-character.
      * @param x the x coordinates for player
      * @param y the y coordinates for player
      */

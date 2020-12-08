@@ -22,18 +22,25 @@ public class Play {
     List<Shot> bullets = new ArrayList<>();
     Spaceship player;
 
-    public Play() {
-
-    }
-
+    /**
+     * Gets a spaceship for the player from domain.
+     */
     public void getPlayer() {
         this.player = game.getPlayer();
     }
 
+    /**
+     * Gets the invaders from domain.
+     */
     public void getInvaders() {
         this.invaders = game.getInvaders();
     }
 
+    /**
+     * Creates scene.
+     *
+     * @return scene that contains all characters
+     */
     Scene getScene() {
         this.level = 1;
         Pane gameBoard = new Pane();
@@ -50,6 +57,12 @@ public class Play {
         return scene;
     }
 
+    /**
+     * Animates the game.
+     *
+     * @param scene scene for the game
+     * @param gameBoard Pane for the game
+     */
     public void animate(Scene scene, Pane gameBoard) {
 
         Map<KeyCode, Boolean> buttons = new HashMap<>();
@@ -69,21 +82,16 @@ public class Play {
                     game.getPlayer().move(2);
                 }
                 if (buttons.getOrDefault(KeyCode.SPACE, false)) {
-
                     Shot bullet = new Shot((int) game.getPlayer().getCharacter().getTranslateX(), 500 - 60);
                     gameBoard.getChildren().add(bullet.getCharacter());
                     bullets.add(bullet);
                 }
-
                 game.getInvaders().forEach((Invader invader) -> invader.move());
                 bullets.forEach(shot -> shot.moveUp());
-
                 if (game.getInvaders().get(game.getInvaders().size() - 1).getY() > 420) {
                     stop();
                 }
             }
-
         }.start();
     }
-
 }
