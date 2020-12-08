@@ -7,6 +7,8 @@
 import java.util.*;
 import javafx.scene.layout.Pane;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 import spaceinvaders.domain.Game;
@@ -27,10 +29,9 @@ public class GameTest {
     List<Invader> enemies = new ArrayList<>();
     private static final double DELTA = 1e-15;
 
-
     @Before
     public void setUp() {
-        this.level=1;
+        this.level = 1;
         this.board = new Pane();
         this.player = new Spaceship(250, 250);
         this.game = new Game(this.level);
@@ -41,14 +42,14 @@ public class GameTest {
     public void startWorks() {
         game.start();
         this.player = game.getPlayer();
-        
+
         assertEquals(5, enemies.size());
         assertEquals(490, player.getCharacter().getTranslateY(), DELTA);
     }
 
     @Test
     public void getPlayerWorks() {
-        this.player=game.getPlayer();
+        this.player = game.getPlayer();
         assertEquals(player, game.getPlayer());
     }
 
@@ -57,7 +58,7 @@ public class GameTest {
         game.createInvaders();
         assertEquals(enemies, game.getInvaders());
     }
-    
+
     @Test
     public void getInvaderWorks() {
         game.createInvaders();
@@ -67,7 +68,23 @@ public class GameTest {
     @Test
     public void createInvadersWorks() {
         game.createInvaders();
-        assertEquals(level*5, enemies.size());
+        assertEquals(level * 5, enemies.size());
+    }
+
+    @Test
+    public void returnGameStatusWorks() {
+        assertFalse(game.gameOver());
+    }
+
+    @Test
+    public void changeGameStatusWorks() {
+        game.endGame(true);
+        assertTrue(game.gameOver());
+    }
+
+    @Test
+    public void returnLevelWorks() {
+        assertEquals(level, game.getLevel());
     }
 
 }

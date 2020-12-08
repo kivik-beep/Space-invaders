@@ -69,9 +69,8 @@ public class Play {
                     game.getPlayer().move(2);
                 }
                 if (buttons.getOrDefault(KeyCode.SPACE, false)) {
-                    int height = 500;
 
-                    Shot bullet = new Shot((int) game.getPlayer().getCharacter().getTranslateX(), height - 60);
+                    Shot bullet = new Shot((int) game.getPlayer().getCharacter().getTranslateX(), 500 - 60);
                     gameBoard.getChildren().add(bullet.getCharacter());
                     bullets.add(bullet);
                 }

@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Game {
 
-    private final int level;
+    int level;
     boolean gameOver = false;
     Spaceship player;
     List<Invader> enemies = new ArrayList<>();
@@ -23,7 +23,7 @@ public class Game {
                 enemies.add(enemy);
             }
         }
-            }
+    }
 
     public void start() {
         createInvaders();
@@ -37,11 +37,21 @@ public class Game {
     public ArrayList<Invader> getInvaders() {
         return (ArrayList<Invader>) this.enemies;
     }
-    
+
     public Invader invader(int i) {
         return this.enemies.get(i);
     }
     
+    public int getLevel() {
+        return this.level;
+    }
     
+    public void endGame(boolean t) {
+        this.gameOver = t;
+    }
+    
+    public boolean gameOver() {
+        return this.gameOver;
+    }
 
 }
