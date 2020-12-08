@@ -13,13 +13,15 @@ Tavoitteenani on JavaFX:ää käyttäen toteuttaa pelistä hyvin yksinkertainen 
  [Työaikakirjanpito](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
  
  [Arkkitehtuurikuvaus](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/arkkitehtuuri.md)
+ 
+ [Käyttöohje](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 
 
 ## Releaset
 
 [Viikko 5](https://github.com/kivik-beep/ot-harjoitustyo/releases/tag/viikko5)
 
-Viikko 6
+[Viikko 6](https://github.com/kivik-beep/ot-harjoitustyo/releases/tag/Viikko6)
 
 ## Komentorivitoiminnot
 ### Testaus
@@ -49,7 +51,7 @@ Luodaan komennolla
 ```
 mvn javadoc:javadoc
 ```
-Javadoc tulee kansioon *target/site/apidocs* nimellä **index.html*
+Javadoc tulee kansioon *target/site/apidocs* nimellä **index.html**
 
 ### Checkstyle
 Suorittamalla komennon
