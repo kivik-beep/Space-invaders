@@ -28,5 +28,6 @@ päivä | aika | mitä tein
 8.12. | 3 | JavaDocin luominen ja liittäminen checkstyleen
 8.12. | 1 | JavaDocin aiheuttamien checkstyle virheiden korjaus
 8.12. | 2 | arkkitehtuurikuvauksen ja käyttöohjeen luominen
-8.12. | 3 | ohjelman toimintojen kehittely
+8.12. | 1 | README:n päivitys, dokumentit-kansion siistiminen
+8.12. | 2 | ohjelman toimintojen kehittely
 **yht.** | **52**
