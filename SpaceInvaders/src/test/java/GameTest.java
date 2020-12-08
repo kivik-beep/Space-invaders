@@ -46,15 +46,22 @@ public class GameTest {
         assertEquals(490, player.getCharacter().getTranslateY(), DELTA);
     }
 
-    //@Test
+    @Test
     public void getPlayerWorks() {
-        assertEquals(this.player, game.getPlayer());
+        this.player=game.getPlayer();
+        assertEquals(player, game.getPlayer());
     }
 
     @Test
     public void getInvadersWorks() {
         game.createInvaders();
         assertEquals(enemies, game.getInvaders());
+    }
+    
+    @Test
+    public void getInvaderWorks() {
+        game.createInvaders();
+        assertEquals(enemies.get(1), game.invader(1));
     }
 
     @Test
