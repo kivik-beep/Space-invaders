@@ -42,7 +42,7 @@ tehty | ohjelman osa
   x| vihollinen sivut+alas
   x| liikkeet ei voi mennä yli kentän
    | **muut**
-  -| osuma aiheuttaa kuoleman
+  **x**| osuma aiheuttaa kuoleman
   x| vihollinen maassa lopettaa pelin
   -| uusi taso kun edellinen on loppu
   -| ennätykset
