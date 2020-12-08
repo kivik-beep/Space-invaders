@@ -50,7 +50,7 @@ tehty | ohjelman osa
   
   Hahmotelma liikeradoista: 
   
-   ![hahmojen liikeradat](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/liikkeet.png)
+   ![hahmojen liikeradat](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/liikkeet.png)
    
 ### Jatkokehitys:
 - Pelikenttää suurentamalla ja vihollisten määrää lisäämällä pelistä saa tehtyä vaikeamman
