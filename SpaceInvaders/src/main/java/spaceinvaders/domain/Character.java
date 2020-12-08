@@ -2,6 +2,7 @@ package spaceinvaders.domain;
 
 import javafx.geometry.Point2D;
 import javafx.scene.shape.Polygon;
+import javafx.scene.shape.Shape;
 
 public abstract class Character {
 
@@ -76,5 +77,14 @@ public abstract class Character {
             this.alive = false;
         }
         return this.alive;
+    }
+    
+    public boolean collapse(Character another){
+        Shape collapseArea = Shape.intersect(character, another.getCharacter());
+        return collapseArea.getBoundsInLocal().getWidth() != -1;
+    }
+    
+    public void setAlive(boolean alive) {
+        this.alive = alive;
     }
 }

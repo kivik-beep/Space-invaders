@@ -62,6 +62,10 @@ public class Game {
         return this.level;
     }
 
+    public void setNextLevel() {
+        this.level = this.level + 1;
+    }
+
     /**
      * Sets new value to gameOver.
      *
