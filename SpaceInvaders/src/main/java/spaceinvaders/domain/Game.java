@@ -22,7 +22,7 @@ public class Game {
     /**
      * Creates set of invaders based on the current level.
      */
-    public void createInvaders() {
+    public void createInvaders(int level) {
         for (int a = 0; a < level; a++) {
             int y = 40 + a * 50;
             for (int i = 0; i < 5; i++) {
@@ -36,7 +36,7 @@ public class Game {
      * Creates new invaders and spaceship for the game.
      */
     public void start() {
-        createInvaders();
+        createInvaders(this.level);
         this.player = new Spaceship(250, 490);
     }
 

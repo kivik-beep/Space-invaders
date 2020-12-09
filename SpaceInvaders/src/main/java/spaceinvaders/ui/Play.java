@@ -16,7 +16,7 @@ import spaceinvaders.domain.Spaceship;
 
 public class Play {
 
-    private int level;
+    int level;
     boolean gameOver;
     Game game;
     ArrayList<Invader> invaders;
@@ -79,6 +79,7 @@ public class Play {
         new AnimationTimer() {
             @Override
             public void handle(long l) {
+                
                 if (buttons.getOrDefault(KeyCode.LEFT, false)) {
                     game.getPlayer().move(-2);
                 }
@@ -118,7 +119,14 @@ public class Play {
                         .collect(Collectors.toList()));
 
                 if (game.getInvaders().isEmpty()) {
-                    stop();
+                         if (game.getPlayer().alive() == true){
+                             
+                       game.createInvaders(6);
+                       game.getInvaders().forEach((Invader invader) -> gameBoard.getChildren().add(invader.getCharacter()));
+
+                       
+                         }else{
+                    stop();}
                 } else if (game.getInvaders().get(game.getInvaders().size() - 1).getY() > 420) {
                     game.getPlayer().setAlive(false);
                     stop();
