@@ -20,7 +20,6 @@ päivä | aika | mitä tein
 1.12. | 1 | testien, checkstylen ja jar-kansion tarkastus
 1.12. | 2 | sekvenssikaavion luonti
 1.12. | 1 | github release ja README:n parantelu
-**yht.** | **35**
 7.12. | 1 | toisen näkymän lisäys
 7.12. | 4 | käyttöliittymän eriyttäminen sovelluslogiikasta 
 8.12. | 2 | testien luomista
@@ -29,5 +28,7 @@ päivä | aika | mitä tein
 8.12. | 1 | JavaDocin aiheuttamien checkstyle virheiden korjaus
 8.12. | 2 | arkkitehtuurikuvauksen ja käyttöohjeen luominen
 8.12. | 1 | README:n päivitys, dokumentit-kansion siistiminen
-8.12. | 2 | ohjelman toimintojen kehittely
+8.12. | 2 | ammus tuhoaa vihollisen, github release
 **yht.** | **52**
+9.12. | 2 | ohjelmassa tulee uusi vaikeampi taso edellisen päättyessä
+**yht.** | **54**
