@@ -15,7 +15,7 @@ import spaceinvaders.domain.Shot;
 import spaceinvaders.domain.Spaceship;
 
 public class Play {
-
+    
     int level;
     boolean gameOver;
     Game game;
@@ -48,13 +48,13 @@ public class Play {
         gameBoard.setPrefSize(500, 500);
         this.game = new Game(level);
         game.start();
-
+        
         gameBoard.getChildren().add(game.getPlayer().getCharacter());
         game.getInvaders().forEach((Invader invader) -> gameBoard.getChildren().add(invader.getCharacter()));
-
+        
         Scene scene = new Scene(gameBoard);
         animate(scene, gameBoard);
-
+        
         return scene;
     }
 
@@ -65,17 +65,17 @@ public class Play {
      * @param gameBoard Pane for the game
      */
     public void animate(Scene scene, Pane gameBoard) {
-
+        
         Map<KeyCode, Boolean> buttons = new HashMap<>();
-
+        
         scene.setOnKeyPressed(event -> {
             buttons.put(event.getCode(), Boolean.TRUE);
         });
-
+        
         scene.setOnKeyReleased(event -> {
             buttons.put(event.getCode(), Boolean.FALSE);
         });
-
+        
         new AnimationTimer() {
             @Override
             public void handle(long l) {
@@ -93,7 +93,7 @@ public class Play {
                 }
                 game.getInvaders().forEach((Invader invader) -> invader.move());
                 shots.forEach(shot -> shot.moveUp());
-
+                
                 shots.forEach((Shot shot) -> {
                     game.getInvaders().forEach(invader -> {
                         if (shot.collapse(invader)) {
@@ -102,39 +102,40 @@ public class Play {
                         }
                     });
                 });
-
+                
                 shots.stream()
                         .filter(shot -> shot.alive() == false)
                         .forEach(shot -> gameBoard.getChildren().remove(shot.getCharacter()));
                 shots.removeAll(shots.stream()
                         .filter(shot -> shot.alive() == false)
                         .collect(Collectors.toList()));
-
+                
                 game.getInvaders().stream()
                         .filter(invader -> invader.alive() == false)
                         .forEach(invader -> gameBoard.getChildren().remove(invader.getCharacter()));
-
+                
                 game.getInvaders().removeAll(game.getInvaders().stream()
                         .filter(invader -> invader.alive() == false)
                         .collect(Collectors.toList()));
-
+                
                 if (game.getInvaders().isEmpty()) {
-                         if (game.getPlayer().alive() == true){
-                             
-                       game.createInvaders(6);
-                       game.getInvaders().forEach((Invader invader) -> gameBoard.getChildren().add(invader.getCharacter()));
-
-                       
-                         }else{
-                    stop();}
+                    if (game.getPlayer().alive() == true) {
+                        
+                        game.setLevel(1);
+                        game.createInvaders();
+                        game.getInvaders().forEach((Invader invader) -> gameBoard.getChildren().add(invader.getCharacter()));
+                        
+                    } else {
+                        stop();
+                    }
                 } else if (game.getInvaders().get(game.getInvaders().size() - 1).getY() > 420) {
                     game.getPlayer().setAlive(false);
                     stop();
                 }
-
+                
             }
         }
                 .start();
-
+        
     }
 }
