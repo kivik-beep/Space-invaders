@@ -135,6 +135,10 @@ public class Play {
                 
             }
         }
-                .start();        
+                .start();  
+        this.gameOver = true;
+    }
+    public boolean gameOver() {
+        return this.gameOver;
     }
 }

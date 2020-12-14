@@ -18,7 +18,7 @@ public class Start {
      * @param play class Play that contains the game
      * @param stage stage needed for the scene
      */
-    public Start( Play play, Stage stage) {
+    public Start(Play play, Stage stage) {
        // this.playScene = playScene;
         this.play = play;
         this.stage = stage;
