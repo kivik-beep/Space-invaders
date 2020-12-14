@@ -31,4 +31,5 @@ päivä | aika | mitä tein
 8.12. | 2 | ammus tuhoaa vihollisen, github release
 **yht.** | **52**
 9.12. | 2 | ohjelmassa tulee uusi vaikeampi taso edellisen päättyessä
-**yht.** | **54**
+14.12. | 2 | loppunäkymä, pelin aloituksen ajoituksen korjaus
+**yht.** | **56**
