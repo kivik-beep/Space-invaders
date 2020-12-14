@@ -42,7 +42,7 @@ public class Play {
      *
      * @return scene that contains all characters
      */
-    Scene getScene() {
+    public Scene getScene() {
         this.level = 3;
         Pane gameBoard = new Pane();
         gameBoard.setPrefSize(500, 500);

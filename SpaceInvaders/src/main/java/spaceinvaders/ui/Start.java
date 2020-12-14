@@ -8,19 +8,18 @@ import javafx.stage.Stage;
 
 public class Start {
 
-    Scene playScene;
+   // Scene playScene;
     Play play;
     Stage stage;
 
     /**
      * Creates starting scene.
      *
-     * @param playScene scene for the game itself
      * @param play class Play that contains the game
      * @param stage stage needed for the scene
      */
-    public Start(Scene playScene, Play play, Stage stage) {
-        this.playScene = playScene;
+    public Start( Play play, Stage stage) {
+       // this.playScene = playScene;
         this.play = play;
         this.stage = stage;
     }
@@ -41,6 +40,7 @@ public class Start {
         Scene scene = new Scene(board, 500, 500);
 
         startGame.setOnAction((event) -> {
+            Scene playScene = play.getScene();
             stage.setScene(playScene);
         });
 

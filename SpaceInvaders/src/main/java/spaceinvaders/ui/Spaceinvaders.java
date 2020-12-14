@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 /**
  * Space Invaders Game.
  * 
- * @version 2
+ * @version 3 - FINAL
  * @author kxkivi
  */
 public class Spaceinvaders extends Application {
@@ -30,8 +30,8 @@ public class Spaceinvaders extends Application {
 
         stage.setTitle("! ! Space invaders ! !");
         this.play = new Play();
-        Scene playScene = play.getScene();
-        this.start = new Start(playScene, play, stage);
+        
+        this.start = new Start(play, stage);
         Scene startScene = start.getScene();
 
         stage.setScene(startScene);
