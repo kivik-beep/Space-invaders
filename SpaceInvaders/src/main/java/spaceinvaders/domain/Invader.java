@@ -15,6 +15,7 @@ public class Invader extends Character {
      */
     public Invader(int x, int y) {
         super(new Polygon(-20, -20, -20, 20, 20, 20, 20, -20), x, y);
+        this.character.setStyle("-fx-background-color: #8B008B; ");
     }
 
     /**
