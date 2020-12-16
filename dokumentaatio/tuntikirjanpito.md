@@ -32,4 +32,6 @@ päivä | aika | mitä tein
 **yht.** | **52**
 9.12. | 2 | ohjelmassa tulee uusi vaikeampi taso edellisen päättyessä
 14.12. | 2 | loppunäkymä, pelin aloituksen ajoituksen korjaus
-**yht.** | **56**
+15.12. | 2 | loppunäkymän osien suunnittelua, siirtymän tutkintaa
+16.12. | 2 | nappuloiden ja tekstikenttien muotoilua
+**yht.** | **60**
