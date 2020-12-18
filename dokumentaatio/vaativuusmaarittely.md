@@ -31,8 +31,8 @@ tehty | ohjelman osa
 ----| ----------
   x | pelikenttä
   x| alkunäkymä
-  **x**| loppunäkymä
-  - | jokaisesta näkymästä pääsee seuraavaan 
+ **x**| loppunäkymä
+  -| jokaisesta näkymästä pääsee seuraavaan 
    | **hahmot**
  x | alus
  x | ammus
