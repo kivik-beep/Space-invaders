@@ -35,10 +35,10 @@ public class Spaceinvaders extends Application {
         Scene startScene = start.getScene();
         
         End end = new End();
-        //stage.setScene(end.getScene());
-        stage.setScene(startScene);
+        stage.setScene(end.getScene());
+        //stage.setScene(startScene);
         stage.show();
     }
-    
+
 
 }

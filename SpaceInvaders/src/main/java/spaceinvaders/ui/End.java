@@ -5,17 +5,16 @@
  */
 package spaceinvaders.ui;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.ArrayList;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+import javafx.scene.text.Font;
+import spaceinvaders.dao.Records;
 
 /**
  * Scene for high scores.
@@ -24,22 +23,32 @@ import javafx.stage.Stage;
  */
 public class End {
 
+    Records list;
+
     Scene getScene() {
-       
+
         Button newGame = new Button("new game");
         newGame.setMaxSize(100, 50);
         newGame.setStyle("-fx-border-color: #DAA520; -fx-border-width: 3px; -fx-background-color: #FFD700; ");
-        
-        Label highScores = new Label("See your score:");
-        Label first = new Label("1.:");
-        Label second = new Label("2. :");
-        Label third = new Label("3. : ");
+
+        Label highScores = new Label("Top10:");
+        highScores.setFont(new Font(28));
+        VBox scoreList = new VBox();
+
+        this.list = new Records();
+        //list.addScore("minnie", 50);
+
+       ArrayList scores = list.getHighScores();
+
+        for (int i = 0; i < scores.size(); i++) {
+            scoreList.getChildren().add(new Label(i + 1 + ".  " + scores.get(i).toString()));
+        }
 
         BorderPane board = new BorderPane();
 
         VBox score = new VBox();
         score.setSpacing(20);
-        score.getChildren().addAll(highScores, first, second, third);
+        score.getChildren().addAll(highScores, scoreList);
 
         board.setRight(newGame);
         board.setCenter(score);
@@ -48,24 +57,14 @@ public class End {
         board.setPadding(new Insets(40, 40, 40, 40));
 
         Scene scene = new Scene(board);
-        
+
         newGame.setOnAction((ActionEvent event) -> {
-            Spaceinvaders again = new Spaceinvaders();
-            Stage stage = new Stage();
-            try {
-                again.start(stage);
-            } catch (Exception ex) {
-                Logger.getLogger(End.class.getName()).log(Level.SEVERE, null, ex);
-            }
+
         });
 
         return scene;
 
     }
     // get result from Game
-    // player can set name
     // player can get to start-scene
-
-    // High score list shown - adds player 
-
 }
