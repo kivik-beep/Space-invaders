@@ -31,7 +31,8 @@ tehty | ohjelman osa
 ----| ----------
   x | pelikenttä
   x| alkunäkymä
-  -| loppunäkymä
+  **x**| loppunäkymä
+  - | jokaisesta näkymästä pääsee seuraavaan 
    | **hahmot**
  x | alus
  x | ammus
@@ -45,7 +46,7 @@ tehty | ohjelman osa
   x| osuma aiheuttaa kuoleman
   x| vihollinen maassa lopettaa pelin
   **x**| uusi taso kun edellinen on loppu
-  -| ennätykset
+  **x**| ennätykset
   
   
   Hahmotelma liikeradoista: 
