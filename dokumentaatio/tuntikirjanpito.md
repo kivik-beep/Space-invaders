@@ -34,4 +34,7 @@ päivä | aika | mitä tein
 14.12. | 2 | loppunäkymä, pelin aloituksen ajoituksen korjaus
 15.12. | 2 | loppunäkymän osien suunnittelua, siirtymän tutkintaa
 16.12. | 2 | nappuloiden ja tekstikenttien muotoilua
-**yht.** | **60**
+17.12. | 2 | Ennätyslistan luominen
+18.12. | 3 | Tiedostosta luku ja kirjoitus, tietojen siirto ennätyslistaksi
+18.12. | 2 | Ennätyslistan järjestys ja oikea koko, hahmoluokan luonti
+**yht.** | **67**
