@@ -33,10 +33,10 @@ public class Play {
     public Scene getScene() {
         this.level = 3;
         this.game = new Game(level);
-        
-        Pane gameBoard = new Pane();       
+
+        Pane gameBoard = new Pane();
         gameBoard.setPrefSize(500, 500);
-        
+
         game.start();
         gameBoard.getChildren().add(game.getPlayer().getCharacter());
         game.getInvaders().forEach((Invader invader) -> gameBoard.getChildren().add(invader.getCharacter()));
@@ -89,7 +89,6 @@ public class Play {
                 game.getInvaders().forEach((Invader invader) -> invader.move());
                 shots.forEach(shot -> shot.moveUp());
 
-                
                 shots.forEach((Shot shot) -> {
                     game.getInvaders().forEach(invader -> {
                         if (shot.collapse(invader)) {
@@ -122,12 +121,10 @@ public class Play {
                         game.getInvaders().forEach((Invader invader) -> gameBoard.getChildren().add(invader.getCharacter()));
 
                     } else {
-                        game.endGame(true);
                         stop();
                     }
                 } else if (game.getInvaders().get(game.getInvaders().size() - 1).getY() > 420) {
                     game.getPlayer().setAlive(false);
-                    game.endGame(true);
                     endGame(end);
                     stop();
                 }
@@ -137,7 +134,7 @@ public class Play {
                 .start();
 
     }
-    
+
     public void endGame(End end) {
         Scene endS = end.getScene();
         stage.setScene(endS);

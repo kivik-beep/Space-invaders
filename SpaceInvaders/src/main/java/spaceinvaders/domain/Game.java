@@ -6,14 +6,13 @@ import java.util.List;
 public class Game {
 
     int level;
-    boolean gameOver = false;
     Spaceship player;
     List<Invader> enemies = new ArrayList<>();
 
     /**
      * Creates new game.
      *
-     * @param level defines how many invaders is needed.
+     * @param level defines how many rows of invaders is needed.
      */
     public Game(int level) {
         this.level = level;
@@ -48,40 +47,8 @@ public class Game {
         return (ArrayList<Invader>) this.enemies;
     }
 
-    /**
-     * Returns invader from the invader list.
-     *
-     * @param i number of the invader
-     * @return the invader i
-     */
-    public Invader invader(int i) {
-        return this.enemies.get(i);
-    }
-
-    public int getLevel() {
-        return this.level;
-    }
-
     public void setLevel(int t) {
         this.level = this.level + t;
-    }
-
-    /**
-     * Sets new value to gameOver.
-     *
-     * @param t value for is game over
-     */
-    public void endGame(boolean t) {
-        this.gameOver = t;
-    }
-
-    /**
-     * Tells has the player died or not.
-     *
-     * @return is the game over
-     */
-    public boolean gameOver() {
-        return this.gameOver;
     }
 
 }

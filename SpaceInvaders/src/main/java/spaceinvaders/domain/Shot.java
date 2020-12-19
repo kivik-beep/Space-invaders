@@ -9,6 +9,6 @@ public class Shot extends Character {
      * @param y the y coordinates for ammo
      */  
     public Shot(int x, int y) {
-        super(new Polygon(-5, -5, -5, 5, 5, 5, 5, -5), x, y);
+        super(new Polygon(-3, -3, -3, 3, 3, 3, 3, -3), x, y);
     }
 }

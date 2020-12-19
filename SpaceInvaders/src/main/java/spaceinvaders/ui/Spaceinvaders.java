@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 /**
  * Space Invaders Game.
- * 
+ *
  * @version 3 - FINAL
  * @author kxkivi
  */
@@ -15,12 +15,11 @@ public class Spaceinvaders extends Application {
 
     private Play play;
     private Start start;
-    private End end;
 
     /**
      * Starts the user interface.
-     * 
-     * @param args 
+     *
+     * @param args
      */
     public static void main(String[] args) {
         launch(args);
@@ -31,16 +30,12 @@ public class Spaceinvaders extends Application {
 
         stage.setTitle("! ! Space invaders ! !");
         this.play = new Play(stage);
-        
+
         this.start = new Start(play, stage);
         Scene startScene = start.getScene();
-        
-        this.end = new End(stage);
-        //Scene endScene = end.getScene();
-        //stage.setScene(endScene);
+
         stage.setScene(startScene);
         stage.show();
     }
-
 
 }

@@ -34,7 +34,9 @@ public class Invader extends Character {
     }
 
     /**
-     * invaders y coordinate is needed to end the game when invaders get to earth.
+     * Invaders y coordinate is needed to end the game when invaders get to
+     * earth. Used in class Play.
+     *
      * @return y
      */
     public double getY() {

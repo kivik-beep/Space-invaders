@@ -7,8 +7,6 @@
 import java.util.*;
 import javafx.scene.layout.Pane;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import org.junit.Before;
 import org.junit.Test;
 import spaceinvaders.domain.Game;
@@ -59,32 +57,11 @@ public class GameTest {
         assertEquals(enemies, game.getInvaders());
     }
 
-    @Test
-    public void getInvaderWorks() {
-        game.createInvaders();
-        assertEquals(enemies.get(1), game.invader(1));
-    }
 
     @Test
     public void createInvadersWorks() {
         game.createInvaders();
         assertEquals(level * 5, enemies.size());
-    }
-
-    @Test
-    public void returnGameStatusWorks() {
-        assertFalse(game.gameOver());
-    }
-
-    @Test
-    public void changeGameStatusWorks() {
-        game.endGame(true);
-        assertTrue(game.gameOver());
-    }
-
-    @Test
-    public void returnLevelWorks() {
-        assertEquals(level, game.getLevel());
     }
 
 }

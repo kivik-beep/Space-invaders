@@ -7,7 +7,7 @@ import javafx.scene.shape.Shape;
 public abstract class Character {
 
     Polygon character;
-    private Point2D movement;
+    private final Point2D movement;
     private boolean alive;
 
     /**
@@ -32,7 +32,7 @@ public abstract class Character {
     /**
      * Moves characters on the x-axis.
      *
-     * @param way <0 goes left, >0 goes right
+     * @param way negative goes left, positive goes right
      */
     public void move(int way) {
         //way<0 = left

@@ -24,12 +24,12 @@ import spaceinvaders.dao.Records;
  */
 public class End {
 
-    Records list;
-    Stage stage;
+    private Records list;
+    private final Stage stage;
 
     End(Stage stage) {
         this.stage = stage;
-           
+
     }
 
     public Scene getScene() {
@@ -45,7 +45,7 @@ public class End {
         this.list = new Records();
         //list.addScore("minnie", 50);
 
-       ArrayList scores = list.getHighScores();
+        ArrayList scores = list.getHighScores();
 
         for (int i = 0; i < scores.size(); i++) {
             scoreList.getChildren().add(new Label(i + 1 + ".  " + scores.get(i).toString()));
@@ -56,7 +56,7 @@ public class End {
         VBox score = new VBox();
         score.setSpacing(20);
         score.getChildren().addAll(highScores, scoreList);
-        
+
         board.setRight(newGame);
         board.setCenter(score);
 
@@ -76,6 +76,5 @@ public class End {
         return scene;
 
     }
-    // get result from Game
-    // player can get to start-scene
+
 }
