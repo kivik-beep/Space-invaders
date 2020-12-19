@@ -19,7 +19,7 @@ public class Spaceinvaders extends Application {
     /**
      * Starts the user interface.
      *
-     * @param args
+     * @param args arguments
      */
     public static void main(String[] args) {
         launch(args);

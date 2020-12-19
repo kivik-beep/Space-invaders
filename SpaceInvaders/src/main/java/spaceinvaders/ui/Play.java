@@ -53,7 +53,7 @@ public class Play {
      *
      * @param scene scene for the game
      * @param gameBoard Pane for the game
-     * @param end
+     * @param end end to move to the next scene
      */
     public void animate(Scene scene, Pane gameBoard, End end) {
 
@@ -68,6 +68,11 @@ public class Play {
         });
 
         new AnimationTimer() {
+            /**
+             * Handles animations for the game.
+             * 
+             * @param l how keyboard is read
+             */
             @Override
             public void handle(long l) {
 
@@ -135,6 +140,11 @@ public class Play {
 
     }
 
+    /**
+     * This method shows the next scene, End-scene.
+     * 
+     * @param end defined in getScene()
+     */
     public void endGame(End end) {
         Scene endS = end.getScene();
         stage.setScene(endS);

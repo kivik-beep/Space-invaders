@@ -63,5 +63,12 @@ public class GameTest {
         game.createInvaders();
         assertEquals(level * 5, enemies.size());
     }
+    
+    @Test
+    public void setLevelWorks() {
+        this.game.setLevel(5);
+        Game other = new Game(6);
+        assertEquals(game.getInvaders().size(), other.getInvaders().size());
+    }
 
 }

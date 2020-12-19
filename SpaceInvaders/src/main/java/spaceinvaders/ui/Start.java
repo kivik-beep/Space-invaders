@@ -43,7 +43,6 @@ public class Start {
         nameField.setStyle("-fx-background-color: #40E0D0; ");
 
         Button startGame = new Button("START");
-        startGame.setMaxSize(100, 50);
         startGame.setStyle("-fx-border-color: #DAA520; -fx-border-width: 3px; -fx-background-color: #FFD700; ");
 
         GridPane board = new GridPane();
@@ -63,6 +62,11 @@ public class Start {
         return scene;
     }
 
+    /**
+     * Creates guide that contains all the important instructions.
+     * 
+     * @return VBox containing instructions
+     */
     public VBox getGuide() {
         VBox guide = new VBox();
         guide.getChildren().add(new Label("Use arrows [<] and [>] to move your ship"));

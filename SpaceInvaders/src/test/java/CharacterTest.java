@@ -106,8 +106,8 @@ public class CharacterTest {
     }
 
     @Test
-    public void invaderMoveWorks(){
-        int counter = 1; 
+    public void invaderMoveWorks() {
+        int counter = 1;
         //110 times (2) to side - followed by (25) down
         while (counter < 450) {
             invader.move();
@@ -115,10 +115,23 @@ public class CharacterTest {
         }
         assertEquals(100, invader.getY(), DELTA);
     }
-    
+
     @Test
-    public void invaderGivesRightY(){
+    public void invaderGivesRightY() {
         assertEquals(invader.getY(), invader.getCharacter().getTranslateY(), DELTA);
+    }
+
+    @Test
+    public void collapseWorks() {
+        assertEquals(true, shot.collapse(invader));
+    }
+
+    @Test
+    public void setAliveWorks() {
+        shot.setAlive(true);
+        assertTrue(shot.alive());
+        shot.setAlive(false);
+        assertFalse(shot.alive());
     }
 
 }

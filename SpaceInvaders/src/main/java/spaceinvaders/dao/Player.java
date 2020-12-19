@@ -6,19 +6,31 @@
 package spaceinvaders.dao;
 
 /**
- *
+ * This class contains player information.
+ * 
  * @author kxkivi
  */
 public class Player implements Comparable<Player> {
 
-    private int score;
-    private String name;
+    private final int score;
+    private final String name;
 
+    /**
+     * Players info.
+     * 
+     * @param name players name from Start-scene
+     * @param score players points from Game
+     */
     public Player(String name, Integer score) {
         this.name = name;
         this.score = score;
     }
 
+    /**
+     * Modifies players information to saving form.
+     * 
+     * @return name and score separated by comma
+     */
     public String toSave() {
         return name + "," + score;
     }

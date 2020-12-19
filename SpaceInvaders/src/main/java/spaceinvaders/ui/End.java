@@ -24,39 +24,30 @@ import spaceinvaders.dao.Records;
  */
 public class End {
 
-    private Records list;
+    private final Records list;
     private final Stage stage;
 
     End(Stage stage) {
         this.stage = stage;
-
+        this.list = new Records();
     }
 
+    /**
+     * This method creates scene for this class.
+     *
+     * @return scene
+     */
     public Scene getScene() {
 
-        Button newGame = new Button("new game");
-        newGame.setMaxSize(100, 50);
-        newGame.setStyle("-fx-border-color: #DAA520; -fx-border-width: 3px; -fx-background-color: #FFD700; ");
-
-        Label highScores = new Label("Top10:");
-        highScores.setFont(new Font(28));
-        VBox scoreList = new VBox();
-
-        this.list = new Records();
-        //list.addScore("minnie", 50);
-
+        //list.addScore("winnie", 150);
         ArrayList scores = list.getHighScores();
-
-        for (int i = 0; i < scores.size(); i++) {
-            scoreList.getChildren().add(new Label(i + 1 + ".  " + scores.get(i).toString()));
-        }
-
-        BorderPane board = new BorderPane();
 
         VBox score = new VBox();
         score.setSpacing(20);
-        score.getChildren().addAll(highScores, scoreList);
+        score.getChildren().addAll(topTenLabel(), scoreList(scores));
 
+        BorderPane board = new BorderPane();
+        Button newGame = newGame();
         board.setRight(newGame);
         board.setCenter(score);
 
@@ -77,4 +68,41 @@ public class End {
 
     }
 
+    /**
+     * Creates and styles button for new game.
+     *
+     * @return button to start new game
+     */
+    public Button newGame() {
+        Button newGame = new Button("new game");
+        newGame.setMaxSize(100, 50);
+        newGame.setStyle("-fx-border-color: #DAA520; -fx-border-width: 3px; -fx-background-color: #FFD700; ");
+
+        return newGame;
+    }
+
+    /**
+     * Creates and styles label for the top10 list.
+     *
+     * @return heading for top10
+     */
+    public Label topTenLabel() {
+        Label label = new Label("Top10:");
+        label.setFont(new Font(28));
+        return label;
+    }
+
+    /**
+     * Creates top10.
+     *
+     * @param scores list containing all the players
+     * @return VBox with top10 players
+     */
+    public VBox scoreList(ArrayList scores) {
+        VBox scoreList = new VBox();
+        for (int i = 0; i < scores.size(); i++) {
+            scoreList.getChildren().add(new Label(i + 1 + ".  " + scores.get(i).toString()));
+        }
+        return scoreList;
+    }
 }

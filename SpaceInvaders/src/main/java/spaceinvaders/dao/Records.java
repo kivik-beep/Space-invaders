@@ -18,6 +18,11 @@ public class Records {
 
     ArrayList<Player> scores = new ArrayList<>();
 
+    /**
+     * This method reads the file containing high score information.
+     * 
+     * @return high scores in arrayList
+     */
     public ArrayList<Player> getHighScores() {
 
         try (Scanner reader = new Scanner(new File("highscores.csv"))) {
@@ -47,9 +52,11 @@ public class Records {
     }
 
     /**
-     *
-     * @param name
-     * @param point
+     * Method used to add a player in top 10.
+     * Used by End in package UI.
+     * 
+     * @param name new players name
+     * @param point new players score
      */
     public void addScore(String name, Integer point) {
         this.getHighScores();
@@ -70,6 +77,12 @@ public class Records {
 
     }
 
+    /**
+     * This method trims the top10 to 10, and arrays data.
+     * 
+     * @param list the top10 list
+     * @return trimmed version of top10
+     */
     public ArrayList trim(ArrayList list) {
 
         Collections.sort(list);
