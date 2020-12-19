@@ -38,4 +38,7 @@ päivä | aika | mitä tein
 18.12. | 3 | Tiedostosta luku ja kirjoitus, tietojen siirto ennätyslistaksi
 18.12. | 2 | Ennätyslistan järjestys ja oikea koko, hahmoluokan luonti
 19.12. | 1 | Siirtymien luonti (viimeisestä näkymästä ensimmäiseen)
-**yht.** | **68**
+19.12. | 1,5| siirtymät (kaikkien näkymien välillä toimiviksi)
+19.12. | 1 | ylimääräisen koodin siivoaminen
+19.12. | 1 | checkstyle/javadoc ja jacocon (domainin osalta) korjaukset
+**yht.** | **71,5**
