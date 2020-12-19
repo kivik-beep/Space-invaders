@@ -25,15 +25,14 @@ import spaceinvaders.dao.Records;
 public class End {
 
     Records list;
-    private Start start;
     Stage stage;
 
-    End(Start start, Stage stage) {
+    End(Stage stage) {
         this.stage = stage;
-        this.start = start;    
+           
     }
 
-    Scene getScene() {
+    public Scene getScene() {
 
         Button newGame = new Button("new game");
         newGame.setMaxSize(100, 50);
@@ -57,7 +56,7 @@ public class End {
         VBox score = new VBox();
         score.setSpacing(20);
         score.getChildren().addAll(highScores, scoreList);
-
+        
         board.setRight(newGame);
         board.setCenter(score);
 
@@ -68,6 +67,9 @@ public class End {
 
         newGame.setOnAction((ActionEvent event) -> {
 
+            End end = new End(stage);
+            Play play = new Play(stage);
+            Start start = new Start(play, stage);
             stage.setScene(start.getScene());
         });
 

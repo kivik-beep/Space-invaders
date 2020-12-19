@@ -30,13 +30,13 @@ public class Spaceinvaders extends Application {
     public void start(Stage stage) throws Exception {
 
         stage.setTitle("! ! Space invaders ! !");
-        this.play = new Play(end, stage);
+        this.play = new Play(stage);
         
         this.start = new Start(play, stage);
         Scene startScene = start.getScene();
         
-        this.end = new End(start, stage);
-        Scene endScene = end.getScene();
+        this.end = new End(stage);
+        //Scene endScene = end.getScene();
         //stage.setScene(endScene);
         stage.setScene(startScene);
         stage.show();

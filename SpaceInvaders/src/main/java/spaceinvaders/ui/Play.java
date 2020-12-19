@@ -6,51 +6,23 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import javafx.animation.AnimationTimer;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import spaceinvaders.domain.Game;
 import spaceinvaders.domain.Invader;
 import spaceinvaders.domain.Shot;
-import spaceinvaders.domain.Spaceship;
 
 public class Play {
 
     int level;
-    boolean gameOver;
     Game game;
-    ArrayList<Invader> invaders;
     List<Shot> shots = new ArrayList<>();
-    Spaceship player;
-    End end;
     Stage stage;
 
-    Play(End end, Stage stage) {
-        this.end = end;
+    Play(Stage stage) {
         this.stage = stage;
-    }
-
-    /**
-     * Gets a spaceship for the player from domain.
-     */
-    public void getPlayer() {
-        this.player = game.getPlayer();
-    }
-
-    public Play() {
-        this.gameOver = false;
-    }
-
-    /**
-     * Gets the invaders from domain.
-     */
-    public void getInvaders() {
-        this.invaders = game.getInvaders();
     }
 
     /**
@@ -59,18 +31,19 @@ public class Play {
      * @return scene that contains all characters
      */
     public Scene getScene() {
-        this.gameOver = false;
         this.level = 3;
-        Pane gameBoard = new Pane();
-        gameBoard.setPrefSize(500, 500);
         this.game = new Game(level);
+        
+        Pane gameBoard = new Pane();       
+        gameBoard.setPrefSize(500, 500);
+        
         game.start();
-
         gameBoard.getChildren().add(game.getPlayer().getCharacter());
         game.getInvaders().forEach((Invader invader) -> gameBoard.getChildren().add(invader.getCharacter()));
 
+        End end = new End(stage);
         Scene scene = new Scene(gameBoard);
-        animate(scene, gameBoard);
+        animate(scene, gameBoard, end);
 
         return scene;
     }
@@ -80,8 +53,9 @@ public class Play {
      *
      * @param scene scene for the game
      * @param gameBoard Pane for the game
+     * @param end
      */
-    public void animate(Scene scene, Pane gameBoard) {
+    public void animate(Scene scene, Pane gameBoard, End end) {
 
         Map<KeyCode, Boolean> buttons = new HashMap<>();
 
@@ -108,9 +82,14 @@ public class Play {
                     shots.add(shot);
                     gameBoard.getChildren().add(shot.getCharacter());
                 }
+                if (buttons.getOrDefault(KeyCode.Q, false)) {
+                    endGame(end);
+                    stop();
+                }
                 game.getInvaders().forEach((Invader invader) -> invader.move());
                 shots.forEach(shot -> shot.moveUp());
 
+                
                 shots.forEach((Shot shot) -> {
                     game.getInvaders().forEach(invader -> {
                         if (shot.collapse(invader)) {
@@ -144,27 +123,24 @@ public class Play {
 
                     } else {
                         game.endGame(true);
-      //                  stage.setScene(end.getScene());
                         stop();
                     }
                 } else if (game.getInvaders().get(game.getInvaders().size() - 1).getY() > 420) {
                     game.getPlayer().setAlive(false);
                     game.endGame(true);
-   //                 stage.setScene(end.getScene());
+                    endGame(end);
                     stop();
                 }
 
             }
         }
                 .start();
-        if (game.gameOver() == true) {
-            this.gameOver = true;
-        }
 
     }
-
-    public boolean gameOver() {
-        return this.gameOver;
+    
+    public void endGame(End end) {
+        Scene endS = end.getScene();
+        stage.setScene(endS);
     }
 
 }
