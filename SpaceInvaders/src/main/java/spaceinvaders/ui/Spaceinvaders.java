@@ -15,6 +15,7 @@ public class Spaceinvaders extends Application {
 
     private Play play;
     private Start start;
+    private End end;
 
     /**
      * Starts the user interface.
@@ -29,14 +30,15 @@ public class Spaceinvaders extends Application {
     public void start(Stage stage) throws Exception {
 
         stage.setTitle("! ! Space invaders ! !");
-        this.play = new Play();
+        this.play = new Play(end, stage);
         
         this.start = new Start(play, stage);
         Scene startScene = start.getScene();
         
-        End end = new End();
-        stage.setScene(end.getScene());
-        //stage.setScene(startScene);
+        this.end = new End(start, stage);
+        Scene endScene = end.getScene();
+        //stage.setScene(endScene);
+        stage.setScene(startScene);
         stage.show();
     }
 

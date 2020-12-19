@@ -6,7 +6,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import javafx.animation.AnimationTimer;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -23,6 +27,13 @@ public class Play {
     ArrayList<Invader> invaders;
     List<Shot> shots = new ArrayList<>();
     Spaceship player;
+    End end;
+    Stage stage;
+
+    Play(End end, Stage stage) {
+        this.end = end;
+        this.stage = stage;
+    }
 
     /**
      * Gets a spaceship for the player from domain.
@@ -61,8 +72,6 @@ public class Play {
         Scene scene = new Scene(gameBoard);
         animate(scene, gameBoard);
 
-        
-        
         return scene;
     }
 
@@ -135,11 +144,13 @@ public class Play {
 
                     } else {
                         game.endGame(true);
+      //                  stage.setScene(end.getScene());
                         stop();
                     }
                 } else if (game.getInvaders().get(game.getInvaders().size() - 1).getY() > 420) {
                     game.getPlayer().setAlive(false);
-                    game.endGame(true);                   
+                    game.endGame(true);
+   //                 stage.setScene(end.getScene());
                     stop();
                 }
 
@@ -150,10 +161,10 @@ public class Play {
             this.gameOver = true;
         }
 
-
     }
 
     public boolean gameOver() {
         return this.gameOver;
     }
+
 }

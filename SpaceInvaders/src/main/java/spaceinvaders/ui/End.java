@@ -14,6 +14,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 import spaceinvaders.dao.Records;
 
 /**
@@ -24,6 +25,13 @@ import spaceinvaders.dao.Records;
 public class End {
 
     Records list;
+    private Start start;
+    Stage stage;
+
+    End(Start start, Stage stage) {
+        this.stage = stage;
+        this.start = start;    
+    }
 
     Scene getScene() {
 
@@ -60,6 +68,7 @@ public class End {
 
         newGame.setOnAction((ActionEvent event) -> {
 
+            stage.setScene(start.getScene());
         });
 
         return scene;
