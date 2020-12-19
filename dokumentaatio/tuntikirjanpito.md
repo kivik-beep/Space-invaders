@@ -37,4 +37,5 @@ päivä | aika | mitä tein
 17.12. | 2 | Ennätyslistan luominen
 18.12. | 3 | Tiedostosta luku ja kirjoitus, tietojen siirto ennätyslistaksi
 18.12. | 2 | Ennätyslistan järjestys ja oikea koko, hahmoluokan luonti
-**yht.** | **67**
+19.12. | 1 | Siirtymien luonti (viimeisestä näkymästä ensimmäiseen)
+**yht.** | **68**
