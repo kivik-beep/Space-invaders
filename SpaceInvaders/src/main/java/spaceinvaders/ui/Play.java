@@ -138,7 +138,6 @@ public class Play {
                 if (shot.collapse(invader)) {
                     shot.setAlive(false);
                     invader.setAlive(false);
-                    game.destroyEnemy();
                 }
             });
         });

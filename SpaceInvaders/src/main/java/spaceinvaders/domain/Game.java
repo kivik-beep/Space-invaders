@@ -8,7 +8,7 @@ public class Game {
     int level;
     Spaceship player;
     List<Invader> enemies = new ArrayList<>();
-    int enemiesDestroyed;
+    int enemiesCreated;
 
     /**
      * Creates new game.
@@ -17,7 +17,6 @@ public class Game {
      */
     public Game(int level) {
         this.level = level;
-        this.enemiesDestroyed = 0;
     }
 
     /**
@@ -28,7 +27,8 @@ public class Game {
             int y = 40 + a * 50;
             for (int i = 0; i < 5; i++) {
                 Invader enemy = new Invader((460 - i * 50), y);
-                enemies.add(enemy);
+                this.enemies.add(enemy);
+                this.enemiesCreated++;
             }
         }
     }
@@ -54,19 +54,13 @@ public class Game {
     }
 
     /**
-     * This method counts how many enemies have been destroyed.
-     */
-    public void destroyEnemy() {
-        this.enemiesDestroyed++;
-    }
-
-    /**
      * Counts points to show on End scene (and save if in top10).
      *
      * @return the amount of invaders destroyed multiplied by 10
      */
     public int points() {
-        return this.enemiesDestroyed * 10;
+        int destroyed = enemiesCreated - enemies.size();
+        return destroyed * 10;
     }
 
     public int getLevel() {
