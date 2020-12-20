@@ -66,3 +66,6 @@ Sovelluslogiikassa olevat hahmot ovat luotu JavaFX:n Polygoneina omissa luokissa
 
 ### pysyväistalletus
 Ajan ja taitojen puutteen vuoksi pysyväistalletus on tehty tiedostoon, eikä taulukoon (joka olisi ollut toivottavaa). Mukava lisä olisi ollut saada ennätysten päivämäärät mukaan taulukkoon. 
+
+### käyttöjärjestelmä
+oma luokka vaadituille muodoille (esim nappulat) olisi ollut tosi hyvä. Jokaisen komponentin erillinen määrittely toi hieman toisteisuutta koodiin. Myös Play luokan pariin metodiin jäi toisteista koodia, josta olisi ollut hyvä päästä eroon. 
