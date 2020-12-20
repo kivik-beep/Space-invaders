@@ -16,7 +16,8 @@ import java.util.logging.Logger;
  */
 public class Records {
 
-    ArrayList<Player> scores = new ArrayList<>();
+    private final ArrayList<Player> scores = new ArrayList<>();
+  
 
     /**
      * This method reads the file containing high score information.
