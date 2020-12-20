@@ -5,6 +5,7 @@
  */
 package spaceinvaders.dao;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -25,26 +26,34 @@ public class RecordsTest {
 
     @Before
     public void setUp() {
+        
+        try {
+            File added = new File("testscores.csv");
+            try (PrintWriter write = new PrintWriter(added)) {
+                write.println("one,100");
+                write.println("two,90");
+                write.println("three,80");
+                write.println("4,100");
+                write.println("5,100");
+                write.println("6,100");
+                write.println("7,100");
+                write.println("8,100");
+                write.println("9,100");
+                write.println("10,100");
+            }
+        } catch (FileNotFoundException ex1) {
+            Logger.getLogger(Records.class.getName()).log(Level.SEVERE, null, ex1);
+        }
         this.test = new Records("testscores.csv");
-        test.addScore(new Player("one", 100));
-        test.addScore(new Player("two", 90));
-        test.addScore(new Player("three", 80));
-        test.addScore(new Player("4", 100));
-        test.addScore(new Player("5", 100));
-        test.addScore(new Player("6", 100));
-        test.addScore(new Player("7", 100));
-        test.addScore(new Player("8", 100));
-        test.addScore(new Player("9", 100));
-        test.addScore(new Player("10", 100));
+
     }
-    
+
     @After
     public void tearDown() {
-            PrintWriter write = null;
+
         try {
-            
-            test.addScore(new Player("10", 100));
-            write = new PrintWriter("testscores.csv");
+
+            PrintWriter write = new PrintWriter("testscores.csv");
             write.println("one,100");
             write.println("two,90");
             write.println("three,80");
@@ -58,18 +67,15 @@ public class RecordsTest {
             write.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(RecordsTest.class.getName()).log(Level.SEVERE, null, ex);
-        } finally {
-            write.close();
         }
 
-    
     }
 
     @Test
     public void getScoresWorks() {
         ArrayList other = test.getHighScores();
-        test.addScore(new Player("other",70));     
-        test.addScore(new Player("another",50));
+        test.addScore(new Player("other", 70));
+        test.addScore(new Player("another", 50));
 
         assertEquals(other, test.getHighScores());
     }
@@ -84,16 +90,16 @@ public class RecordsTest {
     @Test
     public void trimScoreWorks() {
         ArrayList<Player> testList = test.getHighScores();
-        
-        testList.add(new Player("best",1000));
+
+        testList.add(new Player("best", 1000));
         test.trim(testList);
         testList.add(new Player("worst", 50));
         test.trim(testList);
         test.trim(testList);
-        
+
         assertEquals("best", testList.get(0).getName());
         assertEquals(testList.size(), 10);
-        
+
     }
 
 }
