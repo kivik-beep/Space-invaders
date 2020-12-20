@@ -17,16 +17,24 @@ import java.util.logging.Logger;
 public class Records {
 
     private final ArrayList<Player> scores = new ArrayList<>();
-  
+    private final String pathToFile;
+
+    public Records() {
+        pathToFile = "highscores.csv";
+    }
+    public Records(String path) {
+        this.pathToFile = path;
+    }
 
     /**
      * This method reads the file containing high score information.
      *
+     * @param pathToFile path to the csv file containing all scores
      * @return high scores in arrayList
      */
     public ArrayList<Player> getHighScores() {
 
-        try (Scanner reader = new Scanner(new File("highscores.csv"))) {
+        try (Scanner reader = new Scanner(new File(pathToFile))) {
             while (reader.hasNextLine()) {
                 String score = reader.nextLine();
 
@@ -61,7 +69,7 @@ public class Records {
         this.getHighScores();
         scores.add(player);
 
-        File added = new File("highscores.csv");
+        File added = new File(pathToFile);
         try {
             PrintWriter write = new PrintWriter(added);
             for (int i = 0; i < this.scores.size(); i++) {
@@ -90,4 +98,5 @@ public class Records {
         }
         return list;
     }
+
 }
