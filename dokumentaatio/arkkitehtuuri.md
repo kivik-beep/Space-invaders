@@ -25,7 +25,7 @@ Aloitusnäkymästä siirrytään pelinäkymään pelaajan painaessa aloitusnappu
 Sovelluksessa on kolmea eri hahmotyyppiä; alus, invader ja ammus. 
 Hahmot luodaan niiden omissa luokissa, jotka ovat yleisen Character-luokan aliluokkia. Character määrittää liikkeet, joita kukin hahmo käyttää tarvitsemallaan tavalla. 
 
-Pelaamisen pohjustamiseen tehty Game-luokka alustaa pelin, eli luo tarvittavan vihollisarmeijan ja muut hahmot. Game-luokkaa käytetään keskusteluun käyttöliittymän kanssa. Kun pelaaja on läpäissyt tason, luodaan luokassa Game uuden tason viholliset pelattavaksi. Game laskee siis myös pelaajan pisteitä ennätyksen kirjaamiseksi, ja välittää tämän tiedon käyttöliittymään kun siirrytään viimeiseen näkymään.
+Pelaamisen pohjustamiseen tehty Game-luokka alustaa pelin, eli luo tarvittavan vihollisarmeijan ja muut hahmot. Game-luokkaa käytetään keskusteluun käyttöliittymän kanssa. Kun pelaaja on läpäissyt tason, luodaan luokassa Game uudet viholliset pelattavaksi. Vihollisia luodaan loputtomana virtana. Game laskee pelaajan pisteitä ennätyksen kirjaamiseksi, ja välittää tämän tiedon käyttöliittymään kun siirrytään viimeiseen näkymään.
 
 Hahmotelma luokka/pakkauskaaviosta:
 
