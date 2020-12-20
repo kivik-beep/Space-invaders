@@ -9,7 +9,7 @@ java -jar SpaceInvaders.jar
 ```
 ## Aloitus
 Sovellus käynnistyy aloitusnäkymään.
-Aloitusnäkymässä voi määrittää oman nimensä ja määrittää miltä tasolta haluaa pelin aloittaa (1-5).  Tason valinta vaikuttaa vihollisten määrään ja mikäli tason jättää valitsematta, aloitetaan tasolta 3. 
+Aloitusnäkymässä voi määrittää oman nimensä ja valita pudotusvalikosta miltä tasolta haluaa pelin aloittaa (1-5).  Tason valinta vaikuttaa vihollisten määrään ja mikäli tason jättää valitsematta, aloitetaan tasolta 3. 
 Pelin alkaa saadessaan käskyn, eli kun pelaaja klikkaa nappulaa *start*.
 
 <img src="https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/alku.png" width="400">
