@@ -24,6 +24,8 @@ Tavoitteenani on JavaFX:ää käyttäen toteuttaa pelistä hyvin yksinkertainen 
 
 [Viikko 6](https://github.com/kivik-beep/ot-harjoitustyo/releases/tag/Viikko6)
 
+[Loppupalautus](https://github.com/kivik-beep/ot-harjoitustyo/releases/tag/loppupalautus)
+
 ## Komentorivitoiminnot
 ### Testaus
 Testaus suoritetaan komennolla 
