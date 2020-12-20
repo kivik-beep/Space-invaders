@@ -1,5 +1,5 @@
 # Testausdokumentti
-Ohjelma on testattu käyttöliittymän osalta manuaalisesti käyttäjänä, sekä sovellislogiikan ja Dao:n osalta JUnit yksikkö-testenä.
+Ohjelma on testattu käyttöliittymän osalta manuaalisesti käyttäjänä, sekä sovellislogiikan ja Dao:n osalta JUnit integraatio ja yksikkö-testenä.
 
 ## Sovelluslogiikka
 ### spaceinvaiders.domainin testaus: CharacterTest ja GameTest 
