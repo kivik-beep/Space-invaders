@@ -61,7 +61,14 @@ public class Records {
 
             }
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Records.class.getName()).log(Level.SEVERE, null, ex);
+            File added = new File(pathToFile);
+            try (PrintWriter write = new PrintWriter(added)) {
+                for (int i = 0; i < 10; i++) {
+                    write.println("anon,100");
+                }
+            } catch (FileNotFoundException ex1) {
+                Logger.getLogger(Records.class.getName()).log(Level.SEVERE, null, ex1);
+            }
         }
 
         trim(this.scores);
