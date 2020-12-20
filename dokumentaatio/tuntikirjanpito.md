@@ -41,4 +41,7 @@ päivä | aika | mitä tein
 19.12. | 1,5| siirtymät (kaikkien näkymien välillä toimiviksi)
 19.12. | 1 | ylimääräisen koodin siivoaminen
 19.12. | 1 | checkstyle/javadoc ja jacocon (domainin osalta) korjaukset
-**yht.** | **71,5**
+20.12. | 1,5 | Dao-luokan testien tekoa, jäljellä olevien tehtävien määritys
+20.12. | 2 | uudet sekvenssikaaviot, arkkitehtuurikuvaus ajantasalle
+20.12. | 0,5 | Määrittelydokumentti ajantasalle
+**yht.** | **75,5**
