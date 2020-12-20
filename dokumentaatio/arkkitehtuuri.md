@@ -59,6 +59,7 @@ Tässä näkymässä on itse peli. Pelaaja pystyy liikuttamaan alustaan vasemmal
 <img src="https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/GameOver.png" width="600">
 
 Tässä näkymässä tapahtuu tiedon tallennus ja luku tiedostosta. Loppuessaan peli välittää tiedon pelaajan tiedot( eli nimen ja pisteet) loppunäkymään. Loppunäkymässä luodaan näiden perusteella uusi pelaaja-hahmo. Pelaaja-hahmo lisätään ennätyslistalle ja mikäli pelissä on suoriuduttu tarpeeksi hyvin, pääsee pelaaja top10 listalle! Top10 lista on tiedosto, josta löytyy ennestään 10 hahmon tiedot. Uuden hahmon lisäämisen jälkeen haetaan tieto ennätyksistä, pelaajat lisätään ArrayListiin ja järjestetään pisteiden mukaan. Mikäli (kun) hahmoja on yli 10, poistetaan ylimääräiset hahmot listalta. 
+Loppunäkymä sisältää kaksi nappulaa. Toisesta pääsee alkunäkymään, jossa voi uudelleen määrittää nimimerkin ja tason jolta haluaa aloittaa. Toinen taas aloittaa suoraan uuden pelin samalla nimimerkillä, tasolta 3.
 
 ## Ohjelman rakenteen heikkoudet
 ### sovelluslogiikka
