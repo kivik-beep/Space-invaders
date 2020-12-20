@@ -8,7 +8,7 @@ Nämä luokat on testattu lähinnä automatisoiduilla testeillä. Testit on suor
 
 Toinen testiluokka tässä kansiossa on **GameTest**. Game luokan tärkein tehtävä on kommunikoida käyttöjärjestelmän kanssa. Testauksissa on keskitytty siihen, että hahmojen luonti onnistuu toivotulla tavalla.
 Tämän luokan testeistä iso osa on gettereitä ja settereitä, mutta niitäkin on pyritty mahdollisimman hyvin testaamaan - kattavasti mutta niin että myös testistä olisi jotain hyötyä.
-
+<img src="https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/testaus.png" width="800">
 ## DAO
 ### spaceinvaders.daon testaus: PlayerTest ja RecordsTest
 **PlayerTest** on testattu kuten sovelluslogiikka - mahdollisimman kattavasti eri metodeita käyttäen. RecordsTest on suoritettu luomalla parametrilline metodi Record(tietokanta),
