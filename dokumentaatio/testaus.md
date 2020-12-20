@@ -15,8 +15,8 @@ Tämän luokan testeistä iso osa on gettereitä ja settereitä, mutta niitäkin
 jolla tietokanta *highscores.csv* on saatu vaihdettua tietokantaan *testscores.csv*. Testauksen jälkeen testitietokanta kirjoitetaan uudelleen takaisin alkuperäiseen muotoonsa.
 
 ### Testauskattavuus 
-Testauksen rivikattavuus ohjelmassa edellämainittujen luokkien osalta on 95% ja haarautumakattavuus 92%. 
-Testaamatta jääneet metodien osat koskivat tilanteita, joissa tiedostoa ei ole olemassa (try-catch:ia käyttävien metodien catch). 
+Testauksen rivikattavuus ohjelmassa edellämainittujen luokkien osalta on 91% ja haarautumakattavuus 86%. 
+Testaamatta jääneet metodien osat koskivat tilanteita, joissa tiedostoa ei ole olemassa (try-catch:ia käyttävien metodien catch). Testaamattomia metodeita on tupla määrä jotta päästiin eroon tilanteesta ettei vaadittua dokumenttia löydy. Korjattu luomalla uusi dokumentti, mutta tästä tuli yksi try-catch lisää joka pykälään. 
 Lisäksi DAO:n parametriton luonti jäi testaamatta, sillä highscores.csv haluttiin jättää rauhaan ja CharacterTestissä sekä RecordsTestissä yksi rivi jäi testaamatta vaikean saavutettavuuden takia.
 
 ## Järjestelmätestaus
