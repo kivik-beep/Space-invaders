@@ -8,7 +8,7 @@ Tavoitteenani on JavaFX:ää käyttäen toteuttaa pelistä hyvin yksinkertainen 
 
 ## Dokumentaatio
 
- [Vaativuusmäärittely](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/vaativuusmaarittely.md)
+ [Vaatimusmäärittely](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md)
  
  [Työaikakirjanpito](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md)
  
