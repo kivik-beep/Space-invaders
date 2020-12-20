@@ -19,9 +19,18 @@ public class Records {
     private final ArrayList<Player> scores = new ArrayList<>();
     private final String pathToFile;
 
+    /**
+     * This method sets right (saving)file to this class.
+     */
     public Records() {
         pathToFile = "highscores.csv";
     }
+
+    /**
+     * This method is made for testing other methods.
+     *
+     * @param path test document
+     */
     public Records(String path) {
         this.pathToFile = path;
     }

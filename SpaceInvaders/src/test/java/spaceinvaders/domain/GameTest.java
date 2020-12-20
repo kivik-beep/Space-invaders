@@ -11,9 +11,6 @@ import javafx.scene.layout.Pane;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
-import spaceinvaders.domain.Game;
-import spaceinvaders.domain.Invader;
-import spaceinvaders.domain.Spaceship;
 
 /**
  *
@@ -71,6 +68,22 @@ public class GameTest {
         this.game.setLevel(5);
         Game other = new Game(6);
         assertEquals(game.getInvaders().size(), other.getInvaders().size());
+    }
+    
+    @Test
+    public void getLevelWorks(){
+        game.setLevel(10);
+        assertEquals(11, game.getLevel());
+    }
+    
+    @Test
+    public void pointsWorks(){
+        game.createInvaders();
+        game.createInvaders();
+        game.createInvaders();
+        game.getInvaders().removeAll(enemies);
+
+        assertEquals(game.getLevel()*5*3*10, game.points());
     }
 
 }

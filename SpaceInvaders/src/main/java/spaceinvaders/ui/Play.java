@@ -143,6 +143,13 @@ public class Play {
         });
     }
 
+    /**
+     * This method removes collapsed characters from their lists and pane.
+     * 
+     * @param shots list of shots
+     * @param game game contains list of invaders
+     * @param gameBoard pane to remove characters that are not in game anymore
+     */
     public void removeDead(List<Shot> shots, Game game, Pane gameBoard) {
 
         shots.stream()

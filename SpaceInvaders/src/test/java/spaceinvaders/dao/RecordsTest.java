@@ -89,6 +89,7 @@ public class RecordsTest {
         test.trim(testList);
         testList.add(new Player("worst", 50));
         test.trim(testList);
+        test.trim(testList);
         
         assertEquals("best", testList.get(0).getName());
         assertEquals(testList.size(), 10);
