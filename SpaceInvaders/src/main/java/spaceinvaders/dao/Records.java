@@ -29,7 +29,6 @@ public class Records {
     /**
      * This method reads the file containing high score information.
      *
-     * @param pathToFile path to the csv file containing all scores
      * @return high scores in arrayList
      */
     public ArrayList<Player> getHighScores() {
