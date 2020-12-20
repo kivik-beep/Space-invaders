@@ -7,7 +7,7 @@ Koodin pakkausrakenne on seuraava:
 
 Pakkaus spaceinvaders.ui sisältää JavaFX:llä toteutetun käyttöliittymän, 
 spaceinvaders.domain sovelluslogiikan 
-ja spaceinvaders.dao tietojen pysyväistalletuksen *(dao toistaiseksi luomatta)*
+ja spaceinvaders.dao tietojen pysyväistalletuksen
 
 ## Käyttöliittymä
 
@@ -25,15 +25,14 @@ Aloitusnäkymästä siirrytään pelinäkymään pelaajan painaessa aloitusnappu
 Sovelluksessa on kolmea eri hahmotyyppiä; alus, invader ja ammus. 
 Hahmot luodaan niiden omissa luokissa, jotka ovat yleisen Character-luokan aliluokkia. Character määrittää liikkeet, joita kukin hahmo käyttää tarvitsemallaan tavalla. 
 
-Pelaamisen pohjustamiseen tehty Game-luokka alustaa pelin, eli luo tarvittavan vihollisarmeijan ja muut hahmot. Game-luokkaa käytetään keskusteluun käyttöliittymän kanssa. *Tulevaa: Kun pelaaja on läpäissyt tason, asettaa luokka Game uuden tason pelattavaksi. Game sisältää siis myös pelaajan tiedot ennätyksen kirjaamiseksi, ja välittää tämän tiedon dao:on. Dao:n toiminta vielä tarkemmin suunnittelematta.*
+Pelaamisen pohjustamiseen tehty Game-luokka alustaa pelin, eli luo tarvittavan vihollisarmeijan ja muut hahmot. Game-luokkaa käytetään keskusteluun käyttöliittymän kanssa. Kun pelaaja on läpäissyt tason, luodaan luokassa Game uuden tason viholliset pelattavaksi. Game laskee siis myös pelaajan pisteitä ennätyksen kirjaamiseksi, ja välittää tämän tiedon käyttöliittymään kun siirrytään viimeiseen näkymään.
 
 Hahmotelma luokka/pakkauskaaviosta:
 
 <img src="https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/luokkakaavio.png" width="400">
 
 ## Tietojen pysyväistalletus
-Lopetusnäkymään on tavoitteena saada myöhemmin ennätysnäkymä, johon myös uuden ennätyksen saanut pelaaja voi syöttää nimimerkkinsä.
-Ennätykset tullaan siis tallentamaan jonkinlaiseen tiedostoon, josta niitä voi kutsua. Kuten yllä todettu, pysyväistalletus vielä toteuttamatta.
+Lopetusnäkymässä on top10-lista ja yhteenveto juuri päättyneestä pelistä. Viimeisen scenen kutsun yhteydessä lähetetään pelaajan tiedot käsittelyyn, luodaan dao-luokkaan uusi pelaaja ja tallennetaan tämän tiedot Records luokkaan. Records vastaa pysyväistalletuksesta ja tietojen muusta hallinnoinnista. Se lukee tietoja tiedostosta *highScores.cvs*. Käyttöjärjestelmä pyytää Recordsia lisäämään uuden pelaajan listaansa, ja tämän jälkeen kutsuu pelaajien tietoja listana. Recors lisää hahmon tiedostoon, lukee tiedoston läpi uudestaan luoden uuden listan, järjestää listan suurimmasta pienimpään ja poistaa ylimääräisen pelaajan. Lista pohjustetaan uudelleen joka kerta kun tiedot muuttuvat, joten käyttöjärjesetelmän listalla on kaiken aikaa vain 10 pelaajaa.
 
 ## Päätoiminnallisuudet
 Sovelluksen keskeisimmät toiminnot saadaan kattavasti esitettyä kolmella kaaviolla, jotka kuvaavat kukin oman näkymänsä toimintoja. 
