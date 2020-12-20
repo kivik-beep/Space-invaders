@@ -36,11 +36,30 @@ Lopetusnäkymään on tavoitteena saada myöhemmin ennätysnäkymä, johon myös
 Ennätykset tullaan siis tallentamaan jonkinlaiseen tiedostoon, josta niitä voi kutsua. Kuten yllä todettu, pysyväistalletus vielä toteuttamatta.
 
 ## Päätoiminnallisuudet
-Ohjelman sekvenssikaavio viikolta 5 ei enää vastaa todellisuutta, mutta antaa silti hyvää osviittaa miten sovelluslogiikka ohjelmassa toimii:
+Sovelluksen keskeisimmät toiminnot saadaan kattavasti esitettyä kolmella kaaviolla, jotka kuvaavat kukin oman näkymänsä toimintoja. 
 
-<img src="https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/sekvenssikaavio.png" width="500">
+### Aloitusnäkymä
 
-Tulen päivittämään ohjelman päätoiminnallisuuksia myöhemmin. 
+<img src="https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/Start.png" width="600">
+
+Aloitusnäkymässä käyttäjällä on mahdollisuus valita itselleen nimi ja aloitustaso (vaikuttaa vihollisrivien määrään).
+Kun pelaaja aloittaa pelin painamalla start-nappulaa, luodaan uusi peli, uudet viholliset ja alus pelaajan ohjattavaksi. 
+
+### Pelinäkymä
+
+<img src="https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/Animate.png" width="600">
+
+Tässä näkymässä on itse peli. Pelaaja pystyy liikuttamaan alustaan vasemmalle ja oikealle. Välilyönnistä peli luo uuden ammuksen, joka liikkuu suoraan ylöspäin. Ammuksia on rajoitettu määrä. Mikäli ammus osuu viholliseen, tuhoutuu sekä ammus että vihollinen ja pelaaja saa 10 pistettä lisää. Jos ammus ei osu mihinkään, tuhoutuu se poistuessaan pelikentältä. 
+
+**Peli voi päättyä kahdella eri tavalla:**
+1. pelaaja painaa näppäintä "q" ja peli päättyy
+2. viholliset pääsevät maahan ja peli päättyy.
+
+### Loppunäkymä
+
+<img src="https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/GameOver.png" width="600">
+
+Tässä näkymässä tapahtuu tiedon tallennus ja luku tiedostosta. Loppuessaan peli välittää tiedon pelaajan tiedot( eli nimen ja pisteet) loppunäkymään. Loppunäkymässä luodaan näiden perusteella uusi pelaaja-hahmo. Pelaaja-hahmo lisätään ennätyslistalle ja mikäli pelissä on suoriuduttu tarpeeksi hyvin, pääsee pelaaja top10 listalle! Top10 lista on tiedosto, josta löytyy ennestään 10 hahmon tiedot. Uuden hahmon lisäämisen jälkeen haetaan tieto ennätyksistä, pelaajat lisätään ArrayListiin ja järjestetään pisteiden mukaan. Mikäli (kun) hahmoja on yli 10, poistetaan ylimääräiset hahmot listalta. 
 
 ## Ohjelman rakenteen heikkoudet
 ### sovelluslogiikka
