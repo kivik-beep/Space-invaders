@@ -16,6 +16,7 @@ Tavoitteenani on JavaFX:ää käyttäen toteuttaa pelistä hyvin yksinkertainen 
  
  [Käyttöohje](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md)
 
+ [Testausdokumentti](https://github.com/kivik-beep/ot-harjoitustyo/blob/main/dokumentaatio/testaus.md)
 
 ## Releaset
 
