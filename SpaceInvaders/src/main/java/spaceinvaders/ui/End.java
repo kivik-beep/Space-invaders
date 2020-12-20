@@ -15,6 +15,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import spaceinvaders.dao.Player;
 import spaceinvaders.dao.Records;
 
 /**
@@ -26,6 +27,7 @@ public class End {
 
     private final Records list;
     private final Stage stage;
+    private Player player;
 
     End(Stage stage) {
         this.stage = stage;
@@ -39,29 +41,46 @@ public class End {
      */
     public Scene getScene() {
 
-        //list.addScore("winnie", 150);
+        list.addScore(this.player);
         ArrayList scores = list.getHighScores();
 
         VBox score = new VBox();
         score.setSpacing(20);
-        score.getChildren().addAll(topTenLabel(), scoreList(scores));
+        score.getChildren().addAll(topTenLabel(), scoreList(scores), playerInfo(scores));
 
         BorderPane board = new BorderPane();
-        Button newGame = newGame();
-        board.setRight(newGame);
+        Button newGame = newGame("play again");
+        Button startscene = newGame("to start");
+        
+        VBox buttons = new VBox();
+        buttons.getChildren().addAll(startscene, newGame);
+        buttons.setMaxSize(100, 400);
+        board.setRight(buttons);
         board.setCenter(score);
+        
 
         board.setPrefSize(500, 500);
         board.setPadding(new Insets(40, 40, 40, 40));
 
         Scene scene = new Scene(board);
 
-        newGame.setOnAction((ActionEvent event) -> {
+        startscene.setOnAction((ActionEvent event) -> {
 
             End end = new End(stage);
             Play play = new Play(stage);
             Start start = new Start(play, stage);
             stage.setScene(start.getScene());
+        });
+
+        newGame.setOnAction((ActionEvent event) -> {
+
+            End end = new End(stage);
+            Play play = new Play(stage);
+            play.setName(player.getName());
+
+            Scene playScene = play.getScene(3);
+            stage.setScene(playScene);
+
         });
 
         return scene;
@@ -73,8 +92,8 @@ public class End {
      *
      * @return button to start new game
      */
-    public Button newGame() {
-        Button newGame = new Button("new game");
+    public Button newGame(String text) {
+        Button newGame = new Button(text);
         newGame.setMaxSize(100, 50);
         newGame.setStyle("-fx-border-color: #DAA520; -fx-border-width: 3px; -fx-background-color: #FFD700; ");
 
@@ -104,5 +123,35 @@ public class End {
             scoreList.getChildren().add(new Label(i + 1 + ".  " + scores.get(i).toString()));
         }
         return scoreList;
+    }
+
+    void player(String name, int points) {
+        this.player = new Player(name, points);
+
+    }
+
+    public VBox playerInfo(ArrayList scores) {
+
+        VBox info = new VBox();
+        Label label = new Label();
+        label.setText("You got " + this.player.getScore() + " points.");
+        label.setFont(new Font(20));
+        Label place = new Label();
+
+        int counter = 0;
+        while (counter < 10) {
+            if (this.player.toString().equals(scores.get(counter).toString())) {
+                place.setText("you get place No." + (counter + 1) + "!");
+                break;
+            } else {
+                place.setText("you did not make it to top10 :(");
+            }
+            counter++;
+        }
+        Label invadercount = new Label("Destroed invaders: " + (player.getScore() / 10) + " invaders");
+
+        info.getChildren().addAll(label, place, invadercount);
+
+        return info;
     }
 }

@@ -52,15 +52,13 @@ public class Records {
     }
 
     /**
-     * Method used to add a player in top 10.
-     * Used by End in package UI.
-     * 
-     * @param name new players name
-     * @param point new players score
+     * Method used to add a player in top 10.Used by End in package UI.
+     *
+     * @param player 
      */
-    public void addScore(String name, Integer point) {
+    public void addScore(Player player) {
         this.getHighScores();
-        scores.add(new Player(name, point));
+        scores.add(player);
 
         File added = new File("highscores.csv");
         try {

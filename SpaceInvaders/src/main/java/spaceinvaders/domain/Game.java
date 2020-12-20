@@ -8,6 +8,7 @@ public class Game {
     int level;
     Spaceship player;
     List<Invader> enemies = new ArrayList<>();
+    int enemiesDestroyed;
 
     /**
      * Creates new game.
@@ -16,6 +17,7 @@ public class Game {
      */
     public Game(int level) {
         this.level = level;
+        this.enemiesDestroyed = 0;
     }
 
     /**
@@ -49,6 +51,18 @@ public class Game {
 
     public void setLevel(int t) {
         this.level = this.level + t;
+    }
+
+    public void destroyEnemy() {
+        this.enemiesDestroyed++;
+    }
+    
+    public int points() {
+        return this.enemiesDestroyed*10;
+    }
+
+    public int getLevel() {
+        return this.level;
     }
 
 }

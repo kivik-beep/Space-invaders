@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -20,6 +21,7 @@ public class Play {
     Game game;
     List<Shot> shots = new ArrayList<>();
     Stage stage;
+    String name;
 
     Play(Stage stage) {
         this.stage = stage;
@@ -28,10 +30,11 @@ public class Play {
     /**
      * Creates scene.
      *
+     * @param level
      * @return scene that contains all characters
      */
-    public Scene getScene() {
-        this.level = 3;
+    public Scene getScene(int level) {
+        this.level = level;
         this.game = new Game(level);
 
         Pane gameBoard = new Pane();
@@ -70,7 +73,7 @@ public class Play {
         new AnimationTimer() {
             /**
              * Handles animations for the game.
-             * 
+             *
              * @param l how keyboard is read
              */
             @Override
@@ -94,37 +97,15 @@ public class Play {
                 game.getInvaders().forEach((Invader invader) -> invader.move());
                 shots.forEach(shot -> shot.moveUp());
 
-                shots.forEach((Shot shot) -> {
-                    game.getInvaders().forEach(invader -> {
-                        if (shot.collapse(invader)) {
-                            shot.setAlive(false);
-                            invader.setAlive(false);
-                        }
-                    });
-                });
-
-                shots.stream()
-                        .filter(shot -> shot.alive() == false)
-                        .forEach(shot -> gameBoard.getChildren().remove(shot.getCharacter()));
-                shots.removeAll(shots.stream()
-                        .filter(shot -> shot.alive() == false)
-                        .collect(Collectors.toList()));
-
-                game.getInvaders().stream()
-                        .filter(invader -> invader.alive() == false)
-                        .forEach(invader -> gameBoard.getChildren().remove(invader.getCharacter()));
-
-                game.getInvaders().removeAll(game.getInvaders().stream()
-                        .filter(invader -> invader.alive() == false)
-                        .collect(Collectors.toList()));
-
+                removeDead(shots, game, gameBoard);
+                
                 if (game.getInvaders().isEmpty()) {
                     if (game.getPlayer().alive() == true) {
-
-                        game.setLevel(1);
+                        if (game.getLevel() < 8) {
+                            game.setLevel(1);
+                        }
                         game.createInvaders();
                         game.getInvaders().forEach((Invader invader) -> gameBoard.getChildren().add(invader.getCharacter()));
-
                     } else {
                         stop();
                     }
@@ -142,12 +123,44 @@ public class Play {
 
     /**
      * This method shows the next scene, End-scene.
-     * 
+     *
      * @param end defined in getScene()
      */
     public void endGame(End end) {
+        end.player(name, game.points());
         Scene endS = end.getScene();
         stage.setScene(endS);
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void removeDead(List<Shot> shots, Game game, Pane gameBoard) {
+        shots.forEach((Shot shot) -> {
+            game.getInvaders().forEach(invader -> {
+                if (shot.collapse(invader)) {
+                    shot.setAlive(false);
+                    invader.setAlive(false);
+                    game.destroyEnemy();
+                }
+            });
+        });
+
+        shots.stream()
+                .filter(shot -> shot.alive() == false)
+                .forEach(shot -> gameBoard.getChildren().remove(shot.getCharacter()));
+        shots.removeAll(shots.stream()
+                .filter(shot -> shot.alive() == false)
+                .collect(Collectors.toList()));
+
+        game.getInvaders().stream()
+                .filter(invader -> invader.alive() == false)
+                .forEach(invader -> gameBoard.getChildren().remove(invader.getCharacter()));
+
+        game.getInvaders().removeAll(game.getInvaders().stream()
+                .filter(invader -> invader.alive() == false)
+                .collect(Collectors.toList()));
     }
 
 }
