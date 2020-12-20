@@ -39,10 +39,6 @@ public class Player implements Comparable<Player> {
         return this.score;
     }
 
-    public String getName() {
-        return this.name;
-    }
-
     @Override
     public String toString() {
         return score + " p.   " + name;

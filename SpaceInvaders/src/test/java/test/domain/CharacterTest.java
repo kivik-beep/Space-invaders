@@ -1,3 +1,5 @@
+package test.domain;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -66,7 +68,6 @@ public class CharacterTest {
     public void playerStaysOnBoardLeft() {
         spaceship.move(-2000);
         assertEquals(20, spaceship.getCharacter().getTranslateX(), DELTA);
-
     }
 
     @Test

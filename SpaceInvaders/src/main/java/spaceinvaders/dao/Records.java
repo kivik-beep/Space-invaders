@@ -86,7 +86,7 @@ public class Records {
     public ArrayList trim(ArrayList list) {
 
         Collections.sort(list);
-        if (list.size() > 10) {
+        while(list.size()>10){
             list.remove(10);
         }
         return list;
