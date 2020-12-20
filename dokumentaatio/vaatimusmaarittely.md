@@ -16,19 +16,19 @@ Pelissä tavoitteena on ehtiä ampua kaikki viholliset ennen kuin aika loppuu, e
 ### Käyttöliittymä
 Pelissä on kolme näkymää.
  1. Aloitusnäkymä
-  - pelaaja voi valita tason jolta aloittaa
-  - pelaaja voi määrittää nimensä
+  	- pelaaja voi valita tason jolta aloittaa
+  	- pelaaja voi määrittää nimensä
  
  2. Pelinäkymä
-  - Näkymä johon siirrytään kun aloitusnäkymässä on painettu nappia "start".
-  - Sisältää yllä kuvatun toiminnallisuuden, eli itse pelin. 
-  - Vihollisia on aina rivissä 5, taso määrittää montako riviä vihollia on.
-  - Kun kaikki viholliset on tuhottu, alkaa uusi taso.
+ 	 - Näkymä johon siirrytään kun aloitusnäkymässä on painettu nappia "start".
+ 	 - Sisältää yllä kuvatun toiminnallisuuden, eli itse pelin. 
+ 	 - Vihollisia on aina rivissä 5, taso määrittää montako riviä vihollia on.
+ 	 - Kun kaikki viholliset on tuhottu, alkaa uusi taso.
  
  3. Loppunäkymä
-  - Tallettaa pelaajan tiedot ennätykset sisältävään tiedostoon.
-  - Esittää pelaajalle 10 parasta tulosta
-  - Loppunäkymässä on nappi "new game", jolla pääsee uuteen aloitusnäkymään.
+ 	- Tallettaa pelaajan tiedot ennätykset sisältävään tiedostoon.
+  	- Esittää pelaajalle 10 parasta tulosta
+  	- Loppunäkymässä on nappi "new game", jolla pääsee uuteen aloitusnäkymään.
   
   
   Hahmotelma liikeradoista: 
