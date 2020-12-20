@@ -29,7 +29,6 @@ päivä | aika | mitä tein
 8.12. | 2 | arkkitehtuurikuvauksen ja käyttöohjeen luominen
 8.12. | 1 | README:n päivitys, dokumentit-kansion siistiminen
 8.12. | 2 | ammus tuhoaa vihollisen, github release
-**yht.** | **52**
 9.12. | 2 | ohjelmassa tulee uusi vaikeampi taso edellisen päättyessä
 14.12. | 2 | loppunäkymä, pelin aloituksen ajoituksen korjaus
 15.12. | 2 | loppunäkymän osien suunnittelua, siirtymän tutkintaa
@@ -49,4 +48,7 @@ päivä | aika | mitä tein
 20.12. | 2 | checkstyle ja javadoc kuntoon uusien metodien osalta
 20.12. | 2 | viimeinen yritys luoda tietokanta tekstitiedoston tilalle - epäonnistui
 20.12. | 1.5 | Daon loput testit, muu testikattavuus kohdilleen, checkstyle siivous
-**yht.** | **84,5**
+20.12. | 1 | käyttöohjeen ja arkkitehtuurikuvauksen viimeistely
+20.12. | 2 | testausdokumentti, käyttöliittymän ja asennuksen testaus ja korjaus
+20.12. | 0,5 | suorituskelpoinen jar-tiedosto ja loppupalautuksen release
+**yht.** | **88**
