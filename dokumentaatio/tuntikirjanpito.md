@@ -46,4 +46,7 @@ päivä | aika | mitä tein
 20.12. | 0,5 | Määrittelydokumentti ajantasalle
 20.12. | 0,5 | pisteidenlasku / pelaajan tuloksen lisääminen top10:niin
 20.12. | 3 | pelin tiedot loppunäkymässä, pudotusvalikko tason valintaan, nappuloita
-**yht.** | **79**
+20.12. | 2 | checkstyle ja javadoc kuntoon uusien metodien osalta
+20.12. | 2 | viimeinen yritys luoda tietokanta tekstitiedoston tilalle - epäonnistui
+20.12. | 1.5 | Daon loput testit, muu testikattavuus kohdilleen, checkstyle siivous
+**yht.** | **84,5**
