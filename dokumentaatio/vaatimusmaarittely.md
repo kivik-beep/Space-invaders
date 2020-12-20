@@ -24,11 +24,13 @@ Pelissä on kolme näkymää.
  	 - Sisältää yllä kuvatun toiminnallisuuden, eli itse pelin. 
  	 - Vihollisia on aina rivissä 5, taso määrittää montako riviä vihollia on.
  	 - Kun kaikki viholliset on tuhottu, alkaa uusi taso.
+	 - Pelaaja voi lopettaa pelin painamalla 'q'.
  
  3. Loppunäkymä
  	- Tallettaa pelaajan tiedot ennätykset sisältävään tiedostoon.
   	- Esittää pelaajalle 10 parasta tulosta
-  	- Loppunäkymässä on nappi "new game", jolla pääsee uuteen aloitusnäkymään.
+  	- Loppunäkymässä on nappi "new game", jolla pääsee uuteen peliin.
+	- nappi "to start" jolla pääsee alkunäkymään
   
   
   Hahmotelma liikeradoista: 
