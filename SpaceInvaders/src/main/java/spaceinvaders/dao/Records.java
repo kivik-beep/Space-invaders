@@ -20,7 +20,7 @@ public class Records {
 
     /**
      * This method reads the file containing high score information.
-     * 
+     *
      * @return high scores in arrayList
      */
     public ArrayList<Player> getHighScores() {
@@ -52,9 +52,9 @@ public class Records {
     }
 
     /**
-     * Method used to add a player in top 10.Used by End in package UI.
+     * Method used to add a player in top10, used by End in package UI.
      *
-     * @param player 
+     * @param player after playing, this play-character is created
      */
     public void addScore(Player player) {
         this.getHighScores();
@@ -77,14 +77,14 @@ public class Records {
 
     /**
      * This method trims the top10 to 10, and arrays data.
-     * 
+     *
      * @param list the top10 list
      * @return trimmed version of top10
      */
     public ArrayList trim(ArrayList list) {
 
         Collections.sort(list);
-        while(list.size()>10){
+        while (list.size() > 10) {
             list.remove(10);
         }
         return list;

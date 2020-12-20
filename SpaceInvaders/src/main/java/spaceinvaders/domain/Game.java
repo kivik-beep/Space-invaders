@@ -45,20 +45,28 @@ public class Game {
         return this.player;
     }
 
-    public ArrayList<Invader> getInvaders() {
-        return (ArrayList<Invader>) this.enemies;
+    public List<Invader> getInvaders() {
+        return this.enemies;
     }
 
     public void setLevel(int t) {
         this.level = this.level + t;
     }
 
+    /**
+     * This method counts how many enemies have been destroyed.
+     */
     public void destroyEnemy() {
         this.enemiesDestroyed++;
     }
-    
+
+    /**
+     * Counts points to show on End scene (and save if in top10).
+     *
+     * @return the amount of invaders destroyed multiplied by 10
+     */
     public int points() {
-        return this.enemiesDestroyed*10;
+        return this.enemiesDestroyed * 10;
     }
 
     public int getLevel() {

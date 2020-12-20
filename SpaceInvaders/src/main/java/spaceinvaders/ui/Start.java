@@ -42,19 +42,15 @@ public class Start {
      */
     public Scene getScene() {
 
-        VBox guide = getGuide();
-
         Button startGame = new Button("START");
         startGame.setStyle("-fx-border-color: #DAA520; -fx-border-width: 3px; -fx-background-color: #FFD700; ");
 
         GridPane board = new GridPane();
-        // board.add(nameField, 0, 1);
         board.add(nameAndLevel(), 0, 1);
-        board.add(guide, 0, 0);
+        board.add(getGuide(), 0, 0);
         board.add(startGame, 0, 2);
 
         board.setAlignment(Pos.TOP_CENTER);
-        //board.setVgap(20);
         board.setPadding(new Insets(40, 40, 40, 40));
 
         Scene scene = new Scene(board, 500, 500);
@@ -62,11 +58,9 @@ public class Start {
         startGame.setOnAction((event) -> {
             play.setName(nameField.getText());
             if (box.getValue() == null) {
-                Scene playScene = play.getScene(3);
-                stage.setScene(playScene);
+                stage.setScene(play.getScene(3));
             } else {
-                Scene playScene = play.getScene(box.getValue());
-                stage.setScene(playScene);
+                stage.setScene(play.getScene(box.getValue()));
             }
 
         });
@@ -97,6 +91,10 @@ public class Start {
         return guide;
     }
 
+    /**
+     * This method creates text field for name and drop box for level.
+     * @return name and level in HBox
+     */
     public HBox nameAndLevel() {
         HBox data = new HBox();
         nameField = new TextField("yourName");

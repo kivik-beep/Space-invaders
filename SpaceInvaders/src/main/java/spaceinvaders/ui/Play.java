@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -27,10 +26,14 @@ public class Play {
         this.stage = stage;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     /**
-     * Creates scene.
+     * Creates Play scene.
      *
-     * @param level
+     * @param level defines how many rows of invaders is created
      * @return scene that contains all characters
      */
     public Scene getScene(int level) {
@@ -79,38 +82,15 @@ public class Play {
             @Override
             public void handle(long l) {
 
-                if (buttons.getOrDefault(KeyCode.LEFT, false)) {
-                    game.getPlayer().move(-2);
-                }
-                if (buttons.getOrDefault(KeyCode.RIGHT, false)) {
-                    game.getPlayer().move(2);
-                }
-                if (buttons.getOrDefault(KeyCode.SPACE, false) && shots.size() < 15) {
-                    Shot shot = new Shot((int) game.getPlayer().getCharacter().getTranslateX(), 500 - 60);
-                    shots.add(shot);
-                    gameBoard.getChildren().add(shot.getCharacter());
-                }
-                if (buttons.getOrDefault(KeyCode.Q, false)) {
-                    endGame(end);
-                    stop();
-                }
+                keyCodes(buttons, gameBoard);
+
                 game.getInvaders().forEach((Invader invader) -> invader.move());
                 shots.forEach(shot -> shot.moveUp());
 
+                setAliveValue();
                 removeDead(shots, game, gameBoard);
-                
-                if (game.getInvaders().isEmpty()) {
-                    if (game.getPlayer().alive() == true) {
-                        if (game.getLevel() < 8) {
-                            game.setLevel(1);
-                        }
-                        game.createInvaders();
-                        game.getInvaders().forEach((Invader invader) -> gameBoard.getChildren().add(invader.getCharacter()));
-                    } else {
-                        stop();
-                    }
-                } else if (game.getInvaders().get(game.getInvaders().size() - 1).getY() > 420) {
-                    game.getPlayer().setAlive(false);
+
+                if (buttons.getOrDefault(KeyCode.Q, false) || stopOrRefill(gameBoard) == true) {
                     endGame(end);
                     stop();
                 }
@@ -122,21 +102,37 @@ public class Play {
     }
 
     /**
-     * This method shows the next scene, End-scene.
+     * This method tells the animation how to react on users commands.
      *
-     * @param end defined in getScene()
+     * @param buttons buttons that are used in this game
+     * @param board needed to place new shots on sight
      */
-    public void endGame(End end) {
-        end.player(name, game.points());
-        Scene endS = end.getScene();
-        stage.setScene(endS);
+    public void keyCodes(Map<KeyCode, Boolean> buttons, Pane board) {
+        if (buttons.getOrDefault(KeyCode.LEFT, false)) {
+            game.getPlayer().move(-2);
+        }
+        if (buttons.getOrDefault(KeyCode.RIGHT, false)) {
+            game.getPlayer().move(2);
+        }
+        if (buttons.getOrDefault(KeyCode.SPACE, false) && shots.size() < 15) {
+            Shot shot = new Shot((int) game.getPlayer().getCharacter().getTranslateX(), 500 - 60);
+            shots.add(shot);
+            board.getChildren().add(shot.getCharacter());
+        }
+
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void removeDead(List<Shot> shots, Game game, Pane gameBoard) {
+    /**
+     * Removes characters that have collapsed.
+     *
+     * @param shots list of shots
+     * @param game game that contains list of invaders
+     * @param gameBoard Pane is needed to remove characters from sight
+     */
+    /**
+     * This method changes characters alive-value to false after collapse.
+     */
+    public void setAliveValue() {
         shots.forEach((Shot shot) -> {
             game.getInvaders().forEach(invader -> {
                 if (shot.collapse(invader)) {
@@ -146,6 +142,9 @@ public class Play {
                 }
             });
         });
+    }
+
+    public void removeDead(List<Shot> shots, Game game, Pane gameBoard) {
 
         shots.stream()
                 .filter(shot -> shot.alive() == false)
@@ -161,6 +160,43 @@ public class Play {
         game.getInvaders().removeAll(game.getInvaders().stream()
                 .filter(invader -> invader.alive() == false)
                 .collect(Collectors.toList()));
+    }
+
+    /**
+     * This method creates more invaders if it is not time to stop, and returns
+     * true if it is time to stop.
+     *
+     * @param gameBoard needed to add new invaders
+     * @return boolean value true if it is time to stop, false if not
+     */
+    public boolean stopOrRefill(Pane gameBoard) {
+        if (game.getInvaders().isEmpty()) {
+            if (game.getPlayer().alive() == true) {
+                if (game.getLevel() < 8) {
+                    game.setLevel(1);
+                }
+                game.createInvaders();
+                game.getInvaders().forEach((Invader invader) -> gameBoard.getChildren().add(invader.getCharacter()));
+            } else {
+                return true;
+            }
+        } else if (game.getInvaders().get(game.getInvaders().size() - 1).getY() > 420) {
+            game.getPlayer().setAlive(false);
+            //
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * This method shows the next scene, End-scene.
+     *
+     * @param end defined in getScene()
+     */
+    public void endGame(End end) {
+        end.player(name, game.points());
+        Scene endS = end.getScene();
+        stage.setScene(endS);
     }
 
 }

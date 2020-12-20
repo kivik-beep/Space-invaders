@@ -49,21 +49,46 @@ public class End {
         score.getChildren().addAll(topTenLabel(), scoreList(scores), playerInfo(scores));
 
         BorderPane board = new BorderPane();
-        Button newGame = newGame("play again");
-        Button startscene = newGame("to start");
-        
+        Button newGame = createButton("play again");
+        Button startscene = createButton("to start");
+        buttonsOnAction(startscene, newGame);
+
         VBox buttons = new VBox();
         buttons.getChildren().addAll(startscene, newGame);
         buttons.setMaxSize(100, 400);
         board.setRight(buttons);
         board.setCenter(score);
-        
 
         board.setPrefSize(500, 500);
         board.setPadding(new Insets(40, 40, 40, 40));
 
         Scene scene = new Scene(board);
 
+        return scene;
+
+    }
+
+    /**
+     * Creates and styles button for new game.
+     *
+     * @param text typed on the button
+     * @return button to start new game
+     */
+    public Button createButton(String text) {
+        Button create = new Button(text);
+        create.setMaxSize(100, 50);
+        create.setStyle("-fx-border-color: #DAA520; -fx-border-width: 3px; -fx-background-color: #FFD700; ");
+
+        return create;
+    }
+
+    /**
+     * Sets action for each button.
+     * 
+     * @param startscene creates new start scene and puts it on
+     * @param newGame starts new game with same name from level 3
+     */
+    public void buttonsOnAction(Button startscene, Button newGame) {
         startscene.setOnAction((ActionEvent event) -> {
 
             End end = new End(stage);
@@ -82,22 +107,6 @@ public class End {
             stage.setScene(playScene);
 
         });
-
-        return scene;
-
-    }
-
-    /**
-     * Creates and styles button for new game.
-     *
-     * @return button to start new game
-     */
-    public Button newGame(String text) {
-        Button newGame = new Button(text);
-        newGame.setMaxSize(100, 50);
-        newGame.setStyle("-fx-border-color: #DAA520; -fx-border-width: 3px; -fx-background-color: #FFD700; ");
-
-        return newGame;
     }
 
     /**
@@ -130,6 +139,12 @@ public class End {
 
     }
 
+    /**
+     * This method creates VBox containing all data from the game.
+     * 
+     * @param scores needed to compare players result to top10 list
+     * @return all the information in a VBox
+     */
     public VBox playerInfo(ArrayList scores) {
 
         VBox info = new VBox();
