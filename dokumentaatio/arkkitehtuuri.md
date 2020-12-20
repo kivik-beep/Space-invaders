@@ -64,3 +64,6 @@ Tässä näkymässä tapahtuu tiedon tallennus ja luku tiedostosta. Loppuessaan 
 ## Ohjelman rakenteen heikkoudet
 ### sovelluslogiikka
 Sovelluslogiikassa olevat hahmot ovat luotu JavaFX:n Polygoneina omissa luokissaan, näiden Polygonin luonnit olisi ilmeisesti ollut hyvä saada käyttöliittymän puolelle. Tämä tuli esiin itselle viikolla 6, ja ongelman korjaaminen tässä vaiheessa saattaisi aiheuttaa suuria ongelmia muussa toiminnallisuudessa ja häiritä sovelluksen muiden, tärkeämpien osien etenemistä loppupalautusta varten toivomalleni tasolle. Muutoin käyttöliittymän osia ei ole sovelluslogiikan puolella.
+
+### pysyväistalletus
+Ajan ja taitojen puutteen vuoksi pysyväistalletus on tehty tiedostoon, eikä taulukoon (joka olisi ollut toivottavaa). Mukava lisä olisi ollut saada ennätysten päivämäärät mukaan taulukkoon. 
