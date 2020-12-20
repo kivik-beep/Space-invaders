@@ -16,13 +16,12 @@ jolla tietokanta *highscores.csv* on saatu vaihdettua tietokantaan *testscores.c
 
 ### Testauskattavuus 
 Testauksen rivikattavuus ohjelmassa edellämainittujen luokkien osalta on 91% ja haarautumakattavuus 86%. 
-Testaamatta jääneet metodien osat koskivat tilanteita, joissa tiedostoa ei ole olemassa (try-catch:ia käyttävien metodien catch). Testaamattomia metodeita on tupla määrä jotta päästiin eroon tilanteesta ettei vaadittua dokumenttia löydy. Korjattu luomalla uusi dokumentti, mutta tästä tuli yksi try-catch lisää joka pykälään. 
+Testaamatta jääneet metodien osat koskivat tilanteita, joissa tiedostoa ei ole olemassa (try-catch:ia käyttävien metodien catch). Testaamattomia metodeita tuli tupla määrä jotta päästiin eroon tilanteesta jossa vaadittua dokumenttia löydy(molemmat kattavuudet laskivat tämän vuoksi 5%). Ongelma on korjattu luomalla uusi dokumentti catchiin, mutta tästä tuli yksi try-catch lisää joka pykälään. 
 Lisäksi DAO:n parametriton luonti jäi testaamatta, sillä highscores.csv haluttiin jättää rauhaan ja CharacterTestissä sekä RecordsTestissä yksi rivi jäi testaamatta vaikean saavutettavuuden takia.
 
 ## Järjestelmätestaus
 Sovelluksen järjestelmää on testattu manuaalisesti antamalla ohjelmalle erilaisia ja virheellisiä syötteitä. Ohjelma on kuitenkin varautunut näihin ongelmiin suhteellisen hyvin.
 Sovellus on asennettu uudelleen ja sitä on testattu käyttöohjeen mukaisesti Linux-ympäristössä. Kaikki toiminnallisuudet on käyty läpi tavoilla joihin ohjelma antaa mahdollisuude.
 
-##Sovellukseen jääneet ongelmat
-Sovellus ei anna järkeviä virheilmoituksia kun luettavaa tiedostoa ei ole. 
-Dao:n Records luokan konstruktori olisi pitänyt saada sekä normaalilla että testiarvolla testattua luotettavasti. 
+##Sovellukseen jääneet ongelmat 
+Dao:n Records luokan konstruktori olisi pitänyt saada sekä normaalilla että testiarvolla testattua luotettavasti. Try - catch -ongelma ja sen laskeva vaikutus testikattavuuksiin on ikävä, tämä olisi ollut hyvä vielä ratkaista.
