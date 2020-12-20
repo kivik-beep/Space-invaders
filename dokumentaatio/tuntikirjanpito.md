@@ -44,4 +44,6 @@ päivä | aika | mitä tein
 20.12. | 1,5 | Dao-luokan testien tekoa, jäljellä olevien tehtävien määritys
 20.12. | 2 | uudet sekvenssikaaviot, arkkitehtuurikuvaus ajantasalle
 20.12. | 0,5 | Määrittelydokumentti ajantasalle
-**yht.** | **75,5**
+20.12. | 0,5 | pisteidenlasku / pelaajan tuloksen lisääminen top10:niin
+20.12. | 3 | pelin tiedot loppunäkymässä, pudotusvalikko tason valintaan, nappuloita
+**yht.** | **79**
